@@ -1,0 +1,10 @@
+# Le serveur doit suivre les liens symboliques :
+Options +FollowSymlinks
+
+
+# Activation du module de réécriture d'URL :
+RewriteEngine on
+
+	## http -> https
+RewriteCond %{HTTPS} off
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L,NE,QSA]
