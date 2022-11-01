@@ -1,0 +1,63 @@
+.language-selection-page {
+
+    .FC {
+        @extend .absolute;
+        top: 20%;
+        left: 25%;
+        width: 50vw;
+        height: 50vh;
+        @extend .flex;
+        @extend .flex-center;
+        @extend .flex-wrap;
+    
+        svg {
+            max-height: 100%;
+
+            .st0 {
+                opacity: 0.4;
+                fill: $yellow;
+            }
+            .st1 {
+                opacity: 0.4;
+                fill: $grey;
+            }
+            .st2 {
+                opacity: 0.4;
+                fill: $red;
+            }
+            .st4 {
+                fill: $red1;
+            }
+            .st5 {
+                opacity: 0.95;
+                fill: $red1;
+            }
+            .st6 {
+                opacity: 0.94;
+            }
+            .st7 {
+                opacity: 0.9;
+            }
+            .st8 {
+                fill: $yellow;
+            }
+            .st9 {
+                opacity: 0.9;
+                fill: $yellow;
+            }
+        }
+
+        .language_container {
+            @extend .pt-xs;
+            @extend .w-100;
+            @extend .flex;
+            @extend .flex-center;
+
+            .choose-language-button {
+                span {
+
+                }
+            }
+        }
+    }
+}

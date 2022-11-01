@@ -10,7 +10,7 @@ $grey07: #445055;
 $grey08: #262929;
 $grey09: #000000;
 
-$grey:('grey00', $grey00),
+$allGrey:('grey00', $grey00),
       ('grey01', $grey01),
       ('grey02', $grey02),
       ('grey03', $grey03),
@@ -23,12 +23,16 @@ $grey:('grey00', $grey00),
 
 $red: #E30613;
 @include color-utility('red', $red);
+$red1: #9D1D06;
+@include color-utility('red1', $red1);
 $yellow: #F9E927;
 @include color-utility('yellow', $yellow);
+$grey: #727271;
+@include color-utility('grey', $grey);
 
 @include color-utility('transparent', $transparent);
 
-@each $name, $property in $grey
+@each $name, $property in $allGrey
 {
   @include color-utility(#{$name}, $property, true);
 }
