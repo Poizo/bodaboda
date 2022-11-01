@@ -1,21 +1,3 @@
-////////////////////////////////////////////////////
-//
-//              1. primary
-//
-////////////////////////////////////////////////////
-
-$primary01: #fddc1f;
-$primary02: #fa5a10;
-
-$primary: ('primary01', $primary01),
-          ('primary02', $primary02);
-
-////////////////////////////////////////////////////
-//
-//              2. grey
-//
-////////////////////////////////////////////////////
-
 $transparent: transparent;
 $grey00: #fff;
 $grey01: #EFEFEF;
@@ -39,20 +21,12 @@ $grey:('grey00', $grey00),
       ('grey08', $grey08),
       ('grey09', $grey09);
 
-////////////////////////////////////////////////////
-//
-//              5. Utility
-//
-////////////////////////////////////////////////////
+$red: #E30613;
+@include color-utility('red', $red);
 
 @include color-utility('transparent', $transparent);
 
 @each $name, $property in $grey
 {
   @include color-utility(#{$name}, $property, true);
-}
-
-@each $name, $property in $primary
-{
-  @include color-utility(#{$name}, $property);
 }

@@ -74,7 +74,7 @@
     }
     &:visited
     {
-      color: darken($color: $primary02, $amount: 25%);
+      color: $grey08;
     }
   }
   ul {

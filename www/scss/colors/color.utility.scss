@@ -81,16 +81,6 @@
   {
     color: $color;
   }
-  
-  @if $darkMode {
-    .poizo-dark {
-      .c-#{$name}.-dm-white
-      {
-        color: #fff;
-      }
-    }
-  }
-
 }
 
 //
