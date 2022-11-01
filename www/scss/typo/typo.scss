@@ -1,0 +1,26 @@
+@import "./typography.font-size.scss";
+@import "./typography.typeface.scss";
+@import "./typography.unicode.scss";
+@import "./typography.scss";
+
+
+h1, h2, h3, b
+{
+    @extend .f-bold;
+}
+
+h4, h5, h6
+{
+    @extend .f-medium;
+}
+
+
+span, p, div
+{
+    font-size: 16px ;
+
+    @media (min-width: 580px) 
+    {
+        font-size: 20px;
+    }
+}

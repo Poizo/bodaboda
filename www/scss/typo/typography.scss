@@ -1,0 +1,178 @@
+@charset 'utf-8';
+////////////////////////////////////////////////////
+//
+//              1. Typefaces
+//
+////////////////////////////////////////////////////
+$f-icons:   'poizo-icons';
+$f-medium:  'Roboto Medium';
+$f-bold:    'Roboto Bold';
+$f-regular: 'Roboto';
+$f-accent:  'Roboto Condensed';
+
+// Icons fonts
+@include typeface('poizo-icons', 'poizo_2020_font', $f-icons, 'icon');
+
+// Style fonts
+@include typeface('Roboto', 'Roboto-Regular', $f-regular, 'regular');
+@include typeface('Roboto_Medium', 'Roboto-Medium', $f-medium, 'medium');
+@include typeface('Roboto_Condensed', 'RobotoCondensed-Regular', $f-accent, 'condensed');
+@include typeface('Roboto', 'Roboto-Bold', $f-bold, 'bold');
+
+////////////////////////////////////////////////////
+//
+//              2. Sizes
+//
+////////////////////////////////////////////////////
+@include font-utility('xxs',  $font-xxs);
+@include font-utility('xs',   $font-xs);
+@include font-utility('s',    $font-s);
+@include font-utility('m',    $font-m);
+@include font-utility('l',    $font-l);
+@include font-utility('xl',   $font-xl);
+@include font-utility('xxl',  $font-xxl);
+////////////////////////////////////////////////////
+//
+//              3. Alignement
+//
+////////////////////////////////////////////////////
+.text-left { text-align: left; }
+.text-center { text-align: center; }
+.text-right { text-align: right; }
+.text-justify { text-align: justify; }
+////////////////////////////////////////////////////
+//
+//              4. Case
+//
+////////////////////////////////////////////////////
+.capitalize{ text-transform: capitalize; }
+.uppercase{ text-transform: uppercase; }
+.lowercase{ text-transform: lowercase; }
+////////////////////////////////////////////////////
+//
+//              5. Styles
+//
+////////////////////////////////////////////////////
+.italic{ font-style: italic; }
+.oblique{ font-style: oblique; }
+////////////////////////////////////////////////////
+//
+//              5. Wrap
+//
+////////////////////////////////////////////////////
+.break-all{ word-break: break-all; }
+.break-word{ word-wrap: break-word; }
+.nowrap{ white-space: nowrap; }
+
+.text-ellipsis
+{
+  @extend .nowrap;
+  @extend .o-hidden;
+  text-overflow: ellipsis;
+}
+
+.text-ellipsis-sm
+{
+  @media (max-width: 480px) {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+////////////////////////////////////////////////////
+//
+//              5. Decoration
+//
+////////////////////////////////////////////////////
+.no-decoration{ text-decoration: none; }
+.underline{ text-decoration: underline; }
+.overline{ text-decoration: overline; }
+.strikethrough{ text-decoration: line-through; }
+
+
+
+
+////////////////////////////////////////////////////
+//
+//              6. Icons
+//
+////////////////////////////////////////////////////
+[class^="icon-"],
+[class*=" icon-"],
+.icon {
+  // use !important to prevent issues with browser extensions that change fonts
+  font-family: $f-icons !important;
+  speak: none;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  // Better Font Rendering
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  &.icon-big
+  {
+    font-size: 5rem;
+
+    @media (max-width: 980px) {
+      font-size: 3rem;
+    }
+  }
+}
+
+$icon-arrow-down: unicode(ea01);
+$icon-arrow-left: unicode(ea02);
+$icon-arrow-right: unicode(ea03);
+$icon-arrow-up: unicode(ea04);
+$icon-behance: unicode(ea05);
+$icon-facebook: unicode(ea06);
+$icon-instagram: unicode(ea07);
+$icon-menu_close_icon: unicode(ea08);
+$icon-menu_open_icon: unicode(ea09);
+$icon-poizo: unicode(ea0a);
+$icon-slash: unicode(ea0b);
+
+.icon-arrow-down::before {
+  content: $icon-arrow-down;
+}
+
+.icon-arrow-left::before {
+  content: $icon-arrow-left;
+}
+
+.icon-arrow-right::before {
+  content: $icon-arrow-right;
+}
+
+.icon-arrow-up::before {
+  content: $icon-arrow-up;
+}
+
+.icon-behance::before {
+  content: $icon-behance;
+}
+
+.icon-facebook::before {
+  content: $icon-facebook;
+}
+
+.icon-instagram::before {
+  content: $icon-instagram;
+}
+
+.icon-menu_close_icon::before {
+  content: $icon-menu_close_icon;
+}
+
+.icon-menu_open_icon::before {
+  content: $icon-menu_open_icon;
+}
+
+.icon-poizo::before {
+  content: $icon-poizo;
+}
+
+.icon-slash::before {
+  content: $icon-slash;
+}
+

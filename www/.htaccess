@@ -7,9 +7,13 @@ RewriteEngine on
 
 	## http -> https
 RewriteCond %{HTTPS} off
+RewriteCond %{REQUEST_FILENAME} !-f 
+RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L,NE,QSA]
 
+Errordocument 404  /index.html
 
 	## Boda URLS
 RewriteRule ^$			index.html
 RewriteRule ^boda$ 		index.html
+RewriteRule ^fiesta$ 		index.html

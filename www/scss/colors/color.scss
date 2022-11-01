@@ -1,0 +1,58 @@
+////////////////////////////////////////////////////
+//
+//              1. primary
+//
+////////////////////////////////////////////////////
+
+$primary01: #fddc1f;
+$primary02: #fa5a10;
+
+$primary: ('primary01', $primary01),
+          ('primary02', $primary02);
+
+////////////////////////////////////////////////////
+//
+//              2. grey
+//
+////////////////////////////////////////////////////
+
+$transparent: transparent;
+$grey00: #fff;
+$grey01: #EFEFEF;
+$grey02: #BDC0C1;
+$grey03: #B2B4B9;
+$grey04: #909296;
+$grey05: #69767C;
+$grey06: #5E616E;
+$grey07: #445055;
+$grey08: #262929;
+$grey09: #000000;
+
+$grey:('grey00', $grey00),
+      ('grey01', $grey01),
+      ('grey02', $grey02),
+      ('grey03', $grey03),
+      ('grey04', $grey04),
+      ('grey05', $grey05),
+      ('grey06', $grey06),
+      ('grey07', $grey07),
+      ('grey08', $grey08),
+      ('grey09', $grey09);
+
+////////////////////////////////////////////////////
+//
+//              5. Utility
+//
+////////////////////////////////////////////////////
+
+@include color-utility('transparent', $transparent);
+
+@each $name, $property in $grey
+{
+  @include color-utility(#{$name}, $property, true);
+}
+
+@each $name, $property in $primary
+{
+  @include color-utility(#{$name}, $property);
+}
