@@ -1,0 +1,36 @@
+.language-selection-page {
+    height: 100vh;
+    width: 100vw;
+    @extend .fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba($yellow, 0.05);
+
+    .stain {
+        @extend .absolute;
+        width: 25vw;
+
+        &.red_stain_svg {
+            top: -7vw;
+            left: -7vw;
+        }
+
+        &.yellow_stain_svg {
+            top: -7vw;
+            right: -7vw;
+        }
+
+        &.grey_stain_svg {
+            bottom: -7vw;
+            left: -7vw;
+        }
+
+        &.yellow_stain_bg_svg {
+            width: 100vw;
+            height: 100vh;
+            opacity:0.05;
+            fill:$yellow;
+        }
+
+    }
+}

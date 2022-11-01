@@ -23,6 +23,8 @@ $grey:('grey00', $grey00),
 
 $red: #E30613;
 @include color-utility('red', $red);
+$yellow: #F9E927;
+@include color-utility('yellow', $yellow);
 
 @include color-utility('transparent', $transparent);
 
