@@ -7,12 +7,26 @@ window.onload = () => {
         // window.location.pathname = slug;
     }
     isInvitedAllDay = slug === '/boda';
+    mainInvitation = document.querySelector('.main-invitation');
 
-    if (isInvitedAllDay) {
-        console.log('YOU ARE INVITED ALL DAY');
-    } else {
-        console.log('YOU SUCK');
-    }
+
+    document.querySelector('.choose-language-button.-fr').addEventListener('click', () => {
+        document.querySelector('.language-selection-page').classList.add('-disappear');
+        document.querySelectorAll('.lang__nl').forEach(el => {
+            el.classList.add('hidden');
+        });
+        mainInvitation.classList.remove('-invisible');
+        mainInvitation.classList.add('-fr');
+    });
+    
+    document.querySelector('.choose-language-button.-nl').addEventListener('click', () => {
+        document.querySelector('.language-selection-page').classList.add('-disappear');
+        document.querySelectorAll('.lang__fr').forEach(el => {
+            el.classList.add('hidden');
+        });
+        mainInvitation.classList.remove('-invisible');
+        mainInvitation.classList.add('-nl');
+    });
 
 
 }

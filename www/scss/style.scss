@@ -14,8 +14,11 @@
 
 @import "./animation/animation";
 
-@import "./components/button.component";
 
+.c-pointer
+{
+    cursor: pointer;
+}
 
 @import "./normalize";
 
@@ -24,3 +27,6 @@ svg {
     display: block;
     margin: 0 auto;
 }
+
+@import './pages/language-selection-page';
+@import './pages/main-invitation';

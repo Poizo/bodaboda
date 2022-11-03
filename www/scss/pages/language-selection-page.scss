@@ -1,0 +1,181 @@
+.language-selection-page {
+
+    height: 100vh;
+    width: 100vw;
+    @extend .fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba($yellow, 0.05);
+    transition: top 2s ease-in-out;
+
+    &.-disappear {
+        top: -110vh;
+    }
+
+    .stain {
+        @extend .absolute;
+        width: 25vw;
+
+        &.red_stain_svg {
+            top: -7vw;
+            left: -7vw;
+        }
+
+        &.yellow_stain_svg {
+            top: -7vw;
+            right: -7vw;
+        }
+
+        &.grey_stain_svg {
+            bottom: -7vw;
+            left: -7vw;
+        }
+
+        &.yellow_stain_bg_svg {
+            width: 100vw;
+            height: 100vh;
+            opacity:0.05;
+            fill:$yellow;
+        }
+
+    }
+
+    .FC {
+        @extend .absolute;
+        top: 20%;
+        left: 14%;
+        width: 75vw;
+        height: 50vh;
+        @extend .flex;
+        @extend .flex-center;
+        @extend .flex-wrap;
+    
+        svg {
+            max-height: 100%;
+
+            .slide-visual-inside-svg {
+                transform: translateX(1rem);
+            }
+
+            .st0 {
+                opacity: 0.4;
+                fill: $yellow;
+            }
+            .st1 {
+                opacity: 0.4;
+                fill: $grey;
+            }
+            .st2 {
+                opacity: 0.4;
+                fill: $red;
+            }
+            .st4 {
+                fill: $red1;
+            }
+            .st5 {
+                opacity: 0.95;
+                fill: $red1;
+            }
+            .st6 {
+                opacity: 0.94;
+            }
+            .st7 {
+                opacity: 0.9;
+            }
+            .st8 {
+                fill: $yellow;
+            }
+            .st9 {
+                opacity: 0.9;
+                fill: $yellow;
+            }
+        }
+
+        .language_container {
+            @extend .pt-m;
+            @extend .w-100;
+            @extend .flex;
+            @extend .flex-center;
+
+            .choose-language-button {
+
+                @extend .relative;
+                @extend .py-s;
+                @extend .px-m;
+                @extend .br-m;
+                @extend .c-pointer;
+                @extend .o-hidden;
+                @extend .bw-none;
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                appearance: none;
+                box-shadow: none;
+                background: none;
+            
+                &:focus
+                {
+                    outline: none;
+                    box-shadow: none;
+                }
+        
+                &:after
+                {
+                    content: '';
+                    @extend .absolute;
+                    top: -1000%;
+                    left: -1000%;
+                    z-index: 1;
+                    @extend .h-100;
+                    width: 0;
+                    transition: width .5s ease-in;
+                }
+        
+                &:hover
+                {
+                    &:after
+                    {
+                        top: 0;
+                        left: -25%;
+                        width: 150%;
+                        transform: skewX(-50deg);
+                    }
+        
+                    >span
+                    {
+                        @extend .c-grey00;
+                    }
+                }
+        
+                >span
+                {
+                    @extend .relative;
+                    z-index: 10;
+                    @extend .block;
+                    @extend .w-100;
+                    @extend .text-center;
+                    @extend .uppercase;
+                    @extend .c-grey06;
+                    @extend .f-l;
+                    @extend .f-bold;
+                    transition: color .5s ease-in-out;
+                }
+        
+
+                &.-fr {
+                    background-color: rgba($yellow, .5);
+                    &:after {
+                        background-color: rgba($yellow1, .75);
+                    }
+                }
+                
+                &.-nl {
+                    background-color: rgba($red, .5);
+                    &:after {
+                        background-color: rgba($red1, .75);
+                    }
+
+                }
+            }
+        }
+    }
+}
