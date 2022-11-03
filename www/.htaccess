@@ -17,3 +17,4 @@ Errordocument 404  /index.html
 RewriteRule ^$			index.html
 RewriteRule ^boda$ 		index.html
 RewriteRule ^fiesta$ 		index.html
+RewriteRule ^secret-demo$ 		demo/index.html

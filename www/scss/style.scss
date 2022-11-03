@@ -14,14 +14,12 @@
 
 @import "./animation/animation";
 
+@import "./normalize";
 
 .c-pointer
 {
     cursor: pointer;
 }
-
-@import "./normalize";
-
 
 svg {
     display: block;
@@ -29,4 +27,5 @@ svg {
 }
 
 @import './pages/language-selection-page';
+@import './fragments/aside-menu';
 @import './pages/main-invitation';

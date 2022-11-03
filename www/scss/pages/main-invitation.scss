@@ -7,14 +7,38 @@
     
     &.-fr {
         background-color: rgba($yellow, 0.1);
+
+        .aside-menu__opener {
+            span {
+                color: rgba($yellow, .5);
+            }
+            &:hover,&:focus {
+                span {
+                    @extend .c-yellow;
+                }
+            }
+        }
     }
     &.-nl {
         background-color: rgba($red, 0.1);
+        
+        .aside-menu__opener {
+            span {
+                color: rgba($red, .5);
+            }
+            
+            &:hover,&:focus {
+                span {
+                    @extend .c-red;
+                }
+            }
+        }
     }
     
     opacity: 1;
     min-height: 100vh;
     transition: opacity 2.2s cubic-bezier(1,-0.76, 1, 1.58);
 
-    @extend .p-m;
+    @extend .py-l;
+    @extend .px-xxl;
 }

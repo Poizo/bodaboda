@@ -1,0 +1,34 @@
+.aside-menu {
+    @extend .fixed;
+    top: 0;
+    left: 0;
+    @extend .py-m;
+    @extend .px-s;
+
+    &__opener {
+        @extend .c-pointer;
+        @extend .o-hidden;
+        @extend .bw-none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        box-shadow: none;
+        background: none;
+        >span {
+            @extend .f-xl;
+            @extend .icon-menu_open_icon;
+            transition: color .5s ease-in-out;
+        }
+        
+        &.-open {
+            >span
+            {
+                @extend .icon-menu_close_icon;
+            }
+        }
+    }
+
+    &__content {
+        @extend .hidden;
+    }
+}

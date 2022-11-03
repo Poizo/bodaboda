@@ -1,32 +1,44 @@
 window.onload = () => {
     let isInvitedAllDay = false;
     let slug = window.location.pathname;
+    let currentLang = 'en';
+    const frTitle = "Invitation au mariage de Charlotte Desmaret et Felix Ryckebusch";
+    const nlTitle = "Uitnodiging voor het huwelijk van Charlotte Desmaret en Felix Ryckebusch";
+    const mainInvitation = document.querySelector('.main-invitation');    
+
     if (slug === '/' || (slug !== '/boda' && slug !== '/fiesta')) {
         slug = '/fiesta';
         //  Uncomment to put on prod
         // window.location.pathname = slug;
     }
     isInvitedAllDay = slug === '/boda';
-    mainInvitation = document.querySelector('.main-invitation');
 
-
+    ///////////////////////////
     document.querySelector('.choose-language-button.-fr').addEventListener('click', () => {
-        document.querySelector('.language-selection-page').classList.add('-disappear');
-        document.querySelectorAll('.lang__nl').forEach(el => {
-            el.classList.add('hidden');
-        });
-        mainInvitation.classList.remove('-invisible');
-        mainInvitation.classList.add('-fr');
+        chooseLanguage('fr'); 
     });
-    
     document.querySelector('.choose-language-button.-nl').addEventListener('click', () => {
-        document.querySelector('.language-selection-page').classList.add('-disappear');
-        document.querySelectorAll('.lang__fr').forEach(el => {
+        chooseLanguage('nl');
+    });
+    //////////////////////
+
+
+    const switchLang = (lang) => {
+        currentLang = lang;
+        mainInvitation.classList.add(`-${lang}`);
+        document.querySelectorAll(`.lang__${lang === 'nl' ? 'fr' : 'nl'}`).forEach(el => {
             el.classList.add('hidden');
         });
-        mainInvitation.classList.remove('-invisible');
-        mainInvitation.classList.add('-nl');
-    });
+        const htmlPage = document.getElementsByTagName('html')[0];
+        htmlPage.lang = currentLang;
+        document.querySelector('head title').textContent = currentLang === 'fr' ? frTitle : nlTitle;
+    }
 
+    const chooseLanguage = lang => {
+        switchLang(lang);
+        document.querySelector('.language-selection-page').classList.add('-disappear');
+        mainInvitation.classList.remove('-invisible');
+        document.querySelector('.aside-menu').classList.remove('hidden');
+    }
 
 }
