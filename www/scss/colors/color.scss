@@ -1,25 +1,17 @@
 $transparent: transparent;
 $grey00: #fff;
-$grey01: #EFEFEF;
-$grey02: #BDC0C1;
-$grey03: #B2B4B9;
-$grey04: #909296;
-$grey05: #69767C;
-$grey06: #5E616E;
-$grey07: #445055;
-$grey08: #262929;
-$grey09: #000000;
+$grey01: #efefef;
+$grey02: #d1d0c6;
+$grey03: #a1a096;
+$grey04: #6b6b62;
+$grey05: #383833;
 
 $allGrey:('grey00', $grey00),
       ('grey01', $grey01),
       ('grey02', $grey02),
       ('grey03', $grey03),
       ('grey04', $grey04),
-      ('grey05', $grey05),
-      ('grey06', $grey06),
-      ('grey07', $grey07),
-      ('grey08', $grey08),
-      ('grey09', $grey09);
+      ('grey05', $grey05);
 
 $red: #E30613;
 @include color-utility('red', $red);

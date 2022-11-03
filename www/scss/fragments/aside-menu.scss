@@ -1,34 +1,154 @@
+.aside-menu__opener {
+    @extend .fixed;
+    z-index: 100;
+    top: compute-grid($grid-l);
+    left: compute-grid($grid-xs);
+    @extend .c-pointer;
+    @extend .o-hidden;
+    @extend .bw-none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    box-shadow: none;
+    background: none;
+    >span {
+        @extend .f-xl;
+        @extend .icon-menu_open_icon;
+        transition: color .5s ease-in-out;
+    }
+
+    &-open {
+        >span
+        {
+            @extend .icon-menu_close_icon;
+        }
+    }
+}
+.aside-menu__overlay {
+    @extend .fixed;
+    z-index: 1;
+    width: 0;
+    height: 0;
+    transition: height 300ms ease-in-out, width 300ms ease-in-out;
+
+    &.-open {
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba($grey05, .5);
+    }
+}
+
 .aside-menu {
     @extend .fixed;
+    z-index: 10;
     top: 0;
     left: 0;
-    @extend .py-m;
+    height: 0;
+    @extend .pt-xxl;
+    @extend .pb-m;
     @extend .px-s;
+    @extend .o-hidden;
+    transition: height 500ms ease-in-out,
+    width 500ms ease-in-out,
+    border-bottom-right-radius 500ms ease-in-out;
 
-    &__opener {
-        @extend .c-pointer;
-        @extend .o-hidden;
-        @extend .bw-none;
-        -webkit-appearance: none;
-        -moz-appearance: none;
-        appearance: none;
-        box-shadow: none;
-        background: none;
-        >span {
-            @extend .f-xl;
-            @extend .icon-menu_open_icon;
-            transition: color .5s ease-in-out;
-        }
-        
-        &.-open {
-            >span
-            {
-                @extend .icon-menu_close_icon;
-            }
+            
+    &.-open {
+        background-color: $grey02;
+        max-width: 50vw;
+        min-width: 25vw;
+        border-bottom-right-radius: 24px;
+        width: fit-content;
+        height: 100vh;
+
+        .aside-menu__content {
+            @extend .flex;
+            @extend .flex-center;
         }
     }
 
     &__content {
         @extend .hidden;
-    }
+
+        .language-button {
+                @extend .relative;
+                @extend .py-s;
+                @extend .px-m;
+                @extend .br-m;
+                @extend .c-pointer;
+                @extend .o-hidden;
+                @extend .bw-none;
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                appearance: none;
+                box-shadow: none;
+                background: none;
+            
+                &:focus
+                {
+                    outline: none;
+                    box-shadow: none;
+                }
+        
+                &:after
+                {
+                    content: '';
+                    @extend .absolute;
+                    top: -1000%;
+                    left: -1000%;
+                    z-index: 1;
+                    @extend .h-100;
+                    width: 0;
+                    transition: width .5s ease-in;
+                }
+        
+                &:hover
+                {
+                    &:after
+                    {
+                        top: 0;
+                        left: -25%;
+                        width: 150%;
+                        transform: skewX(-50deg);
+                    }
+        
+                    >span
+                    {
+                        @extend .c-grey00;
+                    }
+                }
+        
+                >span
+                {
+                    @extend .relative;
+                    z-index: 10;
+                    @extend .block;
+                    @extend .w-100;
+                    @extend .text-center;
+                    @extend .uppercase;
+                    @extend .c-grey03;
+                    @extend .f-l;
+                    @extend .f-bold;
+                    transition: color .5s ease-in-out;
+                }
+        
+        
+                &.-fr {
+                    background-color: rgba($yellow, .5);
+                    &:after {
+                        background-color: rgba($yellow1, .75);
+                    }
+                }
+                
+                &.-nl {
+                    background-color: rgba($red, .5);
+                    &:after {
+                        background-color: rgba($red1, .75);
+                    }
+        
+                }
+            }
+        }
 }
