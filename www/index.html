@@ -13,6 +13,7 @@
 
 <body>
 	<main>
+		<!-- Home - choose language START -->
 		<section class="language-selection-page">
 			<svg class="stain yellow_stain_bg_svg" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
 				viewBox="0 0 425.2 425.2">
@@ -332,29 +333,34 @@
 			</div>
 
 		</section>
+		<!-- Home - choose language END -->
 
-		<section class="main-invitation -invisible">
-			<button class="aside-menu__opener">
-				<span class="icon icon-menu_open_icon"></span>
-			</button>
-			<div class="aside-menu__overlay"></div>
-			<div class="aside-menu">
-		
-				<div class="aside-menu__content">
-					<button data-lang="fr" class="language-button -fr" type="button">
-						<span>fr</span>
-					</button>
-					<div class="px-s"></div>
-					<button data-lang="nl" class="language-button -nl" type="button">
-						<span>nl</span>
-					</button>
-				</div>
+		<!-- Aside menu START -->
+		<button class="aside-menu__opener out-of-flow">
+			<span class="icon icon-menu_open_icon"></span>
+		</button>
+		<div class="aside-menu__overlay out-of-flow"></div>
+		<div class="aside-menu out-of-flow">
+			<div class="aside-menu__content">
+				<button data-lang="fr" class="language-button -fr" type="button">
+					<span>fr</span>
+				</button>
+				<div class="px-s"></div>
+				<button data-lang="nl" class="language-button -nl" type="button">
+					<span>nl</span>
+				</button>
 			</div>
+		</div>
+		<!-- Aside menu END -->
+
+		<!-- Main Invitation START -->
+		<section class="main-invitation -invisible">
 			<div>
 				<h1 class="lang__fr">Vous êtes invités!</h1>
 				<h1 class="lang__nl">Je bent uitgenodigd!</h1>
 			</div>
 		</section>
+		<!-- Main Invitation END -->
 	</main>
 	<footer></footer>
 </body>

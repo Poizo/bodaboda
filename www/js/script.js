@@ -6,6 +6,8 @@ window.onload = () => {
     const nlTitle = "Uitnodiging voor het huwelijk van Charlotte Desmaret en Felix Ryckebusch";
     const mainInvitation = document.querySelector('.main-invitation');  
     const asideMenu = document.querySelector('.aside-menu');
+    const menuOpener = document.querySelector('.aside-menu__opener');
+    const menuOverlay = document.querySelector('.aside-menu__overlay');
 
     if (slug === '/' || (slug !== '/boda' && slug !== '/fiesta')) {
         slug = '/fiesta';
@@ -16,27 +18,31 @@ window.onload = () => {
 
     ///////////////////////////
     document.querySelector('.choose-language-button.-fr').addEventListener('click', () => {
-        chooseLanguage('fr'); 
+        chooseLanguage('fr');
+        asideMenu.classList.remove('out-of-flow');
+        menuOverlay.classList.remove('out-of-flow');
+        menuOpener.classList.remove('out-of-flow');
     });
     document.querySelector('.choose-language-button.-nl').addEventListener('click', () => {
         chooseLanguage('nl');
+        asideMenu.classList.remove('out-of-flow');
+        menuOverlay.classList.remove('out-of-flow');
+        menuOpener.classList.remove('out-of-flow');
     });
-
-    const menuOpener = document.querySelector('.aside-menu__opener');
-    const menuOverlay = document.querySelector('.aside-menu__overlay');
     
     menuOpener.addEventListener('click', () => {
         menuOpener.classList.toggle('-open');
         menuOverlay.classList.toggle('-open');
         asideMenu.classList.toggle('-open');
+        mainInvitation.classList.toggle('-blurred');
     });
     
     menuOverlay.addEventListener('click', e => {
-        console.log(e);
         if (e.target && e.target.classList.contains('aside-menu__overlay')) {
             menuOpener.classList.remove('-open');
             menuOverlay.classList.remove('-open');
             asideMenu.classList.remove('-open');
+            mainInvitation.classList.remove('-blurred');
         }
     });
 
@@ -52,6 +58,8 @@ window.onload = () => {
         currentLang = lang;
         mainInvitation.classList.add(`-${lang}`);
         mainInvitation.classList.remove(`-${lang === 'fr' ? 'nl' : 'fr'}`);
+        menuOpener.classList.add(`-${lang}`);
+        menuOpener.classList.remove(`-${lang === 'fr' ? 'nl' : 'fr'}`);
         document.querySelectorAll(`.lang__${lang === 'nl' ? 'fr' : 'nl'}`).forEach(el => {
             el.classList.add('hidden');
         });

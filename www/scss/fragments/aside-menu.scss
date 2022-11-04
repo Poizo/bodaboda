@@ -11,19 +11,45 @@
     appearance: none;
     box-shadow: none;
     background: none;
+
     >span {
         @extend .f-xl;
         @extend .icon-menu_open_icon;
         transition: color .5s ease-in-out;
     }
 
-    &-open {
+        
+    &.-fr {
+        span {
+            color: rgba($yellow, .65);
+        }
+        &:hover,&:focus {
+            span {
+                @extend .c-yellow;
+            }
+        }
+    }
+
+    &.-nl {
+        span {
+            color: rgba($red, .5);
+        }
+        
+        &:hover,&:focus {
+            span {
+                @extend .c-red;
+            }
+        }
+    }
+
+    &.-open {
         >span
         {
             @extend .icon-menu_close_icon;
         }
     }
 }
+
 .aside-menu__overlay {
     @extend .fixed;
     z-index: 1;
@@ -36,7 +62,7 @@
         left: 0;
         width: 100vw;
         height: 100vh;
-        background-color: rgba($grey05, .5);
+        background-color: rgba($grey05, .25);
     }
 }
 
@@ -52,6 +78,7 @@
     @extend .o-hidden;
     transition: height 500ms ease-in-out,
     width 500ms ease-in-out,
+    border-top-right-radius 500ms ease-in-out,
     border-bottom-right-radius 500ms ease-in-out;
 
             
@@ -59,6 +86,7 @@
         background-color: $grey02;
         max-width: 50vw;
         min-width: 25vw;
+        border-top-right-radius: 24px;
         border-bottom-right-radius: 24px;
         width: fit-content;
         height: 100vh;

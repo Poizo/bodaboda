@@ -5,19 +5,16 @@
 //
 ////////////////////////////////////////////////////
 $f-icons:   'poizo-icons';
-$f-medium:  'Roboto Medium';
-$f-bold:    'Roboto Bold';
-$f-regular: 'Roboto';
-$f-accent:  'Roboto Condensed';
 
 // Icons fonts
 @include typeface('poizo-icons', 'poizo_2020_font', $f-icons, 'icon');
 
 // Style fonts
-@include typeface('Roboto', 'Roboto-Regular', $f-regular, 'regular');
-@include typeface('Roboto_Medium', 'Roboto-Medium', $f-medium, 'medium');
-@include typeface('Roboto_Condensed', 'RobotoCondensed-Regular', $f-accent, 'condensed');
-@include typeface('Roboto', 'Roboto-Bold', $f-bold, 'bold');
+@include typeface('Comfortaa-Light', 'Comfortaa-Light', 'Comfortaa-Light', 'light');
+@include typeface('Comfortaa-Regular', 'Comfortaa-Regular', 'Comfortaa-Regular', 'regular');
+@include typeface('Comfortaa-Medium', 'Comfortaa-Medium', 'Comfortaa-Medium', 'medium');
+@include typeface('Comfortaa-SemiBold', 'Comfortaa-SemiBold', 'Comfortaa-SemiBold', 'semiBold');
+@include typeface('Comfortaa-Bold', 'Comfortaa-Bold', 'Comfortaa-Bold', 'bold');
 
 ////////////////////////////////////////////////////
 //

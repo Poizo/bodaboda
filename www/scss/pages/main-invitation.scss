@@ -5,35 +5,16 @@
         min-height: 0;
         height: 0;
     }
+
+    &.-blurred {
+        filter: blur(4px);
+    }
     
     &.-fr {
         background-color: rgba($yellow, 0.1);
-
-        .aside-menu__opener {
-            span {
-                color: rgba($yellow, .5);
-            }
-            &:hover,&:focus {
-                span {
-                    @extend .c-yellow;
-                }
-            }
-        }
     }
     &.-nl {
         background-color: rgba($red, 0.1);
-        
-        .aside-menu__opener {
-            span {
-                color: rgba($red, .5);
-            }
-            
-            &:hover,&:focus {
-                span {
-                    @extend .c-red;
-                }
-            }
-        }
     }
     
     opacity: 1;
