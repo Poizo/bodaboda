@@ -132,8 +132,7 @@
                     transition: width .5s ease-in;
                 }
         
-                &:hover
-                {
+                &:hover,&:focus,&.-active {
                     &:after
                     {
                         top: 0;
