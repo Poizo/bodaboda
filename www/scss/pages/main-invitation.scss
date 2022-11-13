@@ -44,11 +44,149 @@
 
         &__wedding {
             @extend .flex;
+            @extend .flex-center;
+            @extend .flex-bottom;
             
-            .-wedding {
-                @extend .uppercase;
-                font-size: 6rem;
-                @extend .f-bold;
+            .-bruiloft {
+                width: 75%;
+                @extend .m-none;
+                
+                #bruiloft_letter_gradient_1{
+                    .bruiloft_gradient_stop_1 {
+                        stop-color: $red1;
+                    }
+
+                    .bruiloft_gradient_stop_2 {
+                        stop-color: $red;
+                    }
+
+                    .bruiloft_gradient_stop_3 {
+                        stop-color: $red1;
+                    }
+
+                }
+                #bruiloft_letter_gradient_2{
+                    .bruiloft_gradient_stop_1 {
+                        stop-color: $red1;
+                    }
+
+                    .bruiloft_gradient_stop_2 {
+                        stop-color: $red;
+                    }
+
+                    .bruiloft_gradient_stop_3 {
+                        stop-color: $red1;
+                    }
+
+                }
+                #bruiloft_letter_gradient_3{
+                    .bruiloft_gradient_stop_1 {
+                        stop-color: $red1;
+                    }
+
+                    .bruiloft_gradient_stop_2 {
+                        stop-color: $red;
+                    }
+
+                    .bruiloft_gradient_stop_3 {
+                        stop-color: $red1;
+                    }
+
+                }
+                #bruiloft_letter_gradient_4{
+                    .bruiloft_gradient_stop_1 {
+                        stop-color: $red1;
+                    }
+
+                    .bruiloft_gradient_stop_2 {
+                        stop-color: $red;
+                    }
+
+                    .bruiloft_gradient_stop_3 {
+                        stop-color: $red1;
+                    }
+
+                }
+                #bruiloft_letter_gradient_5{
+                    .bruiloft_gradient_stop_1 {
+                        stop-color: $red1;
+                    }
+
+                    .bruiloft_gradient_stop_2 {
+                        stop-color: $red;
+                    }
+
+                    .bruiloft_gradient_stop_3 {
+                        stop-color: $red1;
+                    }
+
+                }
+                #bruiloft_letter_gradient_6{
+                    .bruiloft_gradient_stop_1 {
+                        stop-color: $red1;
+                    }
+
+                    .bruiloft_gradient_stop_2 {
+                        stop-color: $red;
+                    }
+
+                    .bruiloft_gradient_stop_3 {
+                        stop-color: $red1;
+                    }
+
+                }
+                #bruiloft_letter_gradient_7{
+                    .bruiloft_gradient_stop_1 {
+                        stop-color: $red1;
+                    }
+
+                    .bruiloft_gradient_stop_2 {
+                        stop-color: $red;
+                    }
+
+                    .bruiloft_gradient_stop_3 {
+                        stop-color: $red1;
+                    }
+
+                }
+                #bruiloft_letter_gradient_8{
+                    .bruiloft_gradient_stop_1 {
+                        stop-color: $red1;
+                    }
+
+                    .bruiloft_gradient_stop_2 {
+                        stop-color: $red;
+                    }
+
+                    .bruiloft_gradient_stop_3 {
+                        stop-color: $red1;
+                    }
+
+                }
+                .bruiloft_letter_gradient_0{
+                    fill:url(#bruiloft_letter_gradient_1);
+                }
+                .bruiloft_letter_gradient_1{
+                    fill:url(#bruiloft_letter_gradient_2);
+                }
+                .bruiloft_letter_gradient_2{
+                    fill:url(#bruiloft_letter_gradient_3);
+                }
+                .bruiloft_letter_gradient_3{
+                    fill:url(#bruiloft_letter_gradient_4);
+                }
+                .bruiloft_letter_gradient_4{
+                    fill:url(#bruiloft_letter_gradient_5);
+                }
+                .bruiloft_letter_gradient_5{
+                    fill:url(#bruiloft_letter_gradient_6);
+                }
+                .bruiloft_letter_gradient_6{
+                    fill:url(#bruiloft_letter_gradient_7);
+                }
+                .bruiloft_letter_gradient_7{
+                    fill:url(#bruiloft_letter_gradient_8);
+                }
             }
 
 
