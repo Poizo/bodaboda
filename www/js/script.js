@@ -54,7 +54,7 @@ window.onload = () => {
     const chooseLanguage = (lang) => {
         switchLang(lang);
         document.querySelector('.language-selection-page').classList.add('-disappear');
-        mainInvitation.classList.remove('-invisible');
+        mainInvitation.classList.remove('-invisible', 'out-of-flow');
         document.querySelector('.aside-menu').classList.remove('hidden');
     }
 

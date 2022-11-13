@@ -1733,7 +1733,7 @@ html {
   background-color: #6b6b62;
 }
 
-.c-grey04 {
+.c-grey04, .main-invitation .title__wedding .title__text, .main-invitation .title__text {
   color: #6b6b62;
 }
 
@@ -2935,7 +2935,7 @@ html {
   padding-top: 24px;
 }
 
-.pr-l {
+.pr-l, .main-invitation {
   padding-right: 24px;
 }
 
@@ -3301,7 +3301,7 @@ html {
   padding: 64px;
 }
 
-.px-xxl, .main-invitation {
+.px-xxl {
   padding-left: 64px;
   padding-right: 64px;
 }
@@ -3323,7 +3323,7 @@ html {
   padding-bottom: 64px;
 }
 
-.pl-xxl {
+.pl-xxl, .main-invitation {
   padding-left: 64px;
 }
 
@@ -3395,7 +3395,7 @@ html {
   margin-left: auto;
 }
 
-.block, .aside-menu__content .language-button > span, .language-selection-page .FC .language_container .choose-language-button > span {
+.block, .main-invitation .title__text, .aside-menu__content .language-button > span, .language-selection-page .FC .language_container .choose-language-button > span {
   display: block;
 }
 
@@ -3603,7 +3603,7 @@ html {
   box-sizing: border-box;
 }
 
-.flex, .aside-menu.-open .aside-menu__content, .language-selection-page .FC .language_container, .language-selection-page .FC, .row {
+.flex, .main-invitation .title__wedding, .aside-menu.-open .aside-menu__content, .language-selection-page .FC .language_container, .language-selection-page .FC, .row {
   display: flex;
 }
 
@@ -3750,7 +3750,7 @@ html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-.f-medium, h4, h5, h6 {
+.f-medium, .main-invitation .title__wedding .title__text, .main-invitation .title__text, h4, h5, h6 {
   font-family: "Comfortaa-Medium";
 }
 
@@ -3782,7 +3782,7 @@ html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-.f-bold, .aside-menu__content .language-button > span, .language-selection-page .FC .language_container .choose-language-button > span, strong, h1, h2, h3, b {
+.f-bold, .main-invitation .title__wedding .-wedding, .aside-menu__content .language-button > span, .language-selection-page .FC .language_container .choose-language-button > span, strong, h1, h2, h3, b {
   font-family: "Comfortaa-Bold";
 }
 
@@ -3798,7 +3798,7 @@ html {
   font-size: 0.875rem;
 }
 
-.f-m {
+.f-m, .main-invitation .title__wedding .title__text {
   font-size: 1rem;
 }
 
@@ -3818,7 +3818,7 @@ html {
   text-align: left;
 }
 
-.text-center, .aside-menu__content .language-button > span, .language-selection-page .FC .language_container .choose-language-button > span {
+.text-center, .main-invitation .title__text, .aside-menu__content .language-button > span, .language-selection-page .FC .language_container .choose-language-button > span {
   text-align: center;
 }
 
@@ -3834,11 +3834,11 @@ html {
   text-transform: capitalize;
 }
 
-.uppercase, .aside-menu__content .language-button > span, .language-selection-page .FC .language_container .choose-language-button > span {
+.uppercase, .main-invitation .title__wedding .-wedding, .aside-menu__content .language-button > span, .language-selection-page .FC .language_container .choose-language-button > span {
   text-transform: uppercase;
 }
 
-.lowercase {
+.lowercase, .main-invitation .title__wedding .title__text {
   text-transform: lowercase;
 }
 
@@ -4514,6 +4514,15 @@ svg {
 }
 .main-invitation.-nl {
   background-color: rgba(227, 6, 19, 0.1);
+}
+.main-invitation .title {
+  max-height: 50vh;
+}
+.main-invitation .title__wedding .-wedding {
+  font-size: 6rem;
+}
+.main-invitation .title__wedding .title__text {
+  background: none;
 }
 
 /*# sourceMappingURL=style.css.map */

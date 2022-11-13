@@ -12,9 +12,16 @@
     
     &.-fr {
         background-color: rgba($yellow, 0.1);
+
+        .title__wedding {
+
+        }
     }
     &.-nl {
         background-color: rgba($red, 0.1);
+        .title__wedding {
+
+        }
     }
     
     opacity: 1;
@@ -22,5 +29,37 @@
     transition: opacity 2.2s cubic-bezier(1,-0.76, 1, 1.58);
 
     @extend .py-l;
-    @extend .px-xxl;
+    @extend .pl-xxl;
+    @extend .pr-l;
+
+    .title {
+        max-height: 50vh;
+
+        &__text {
+            @extend .block;
+            @extend .c-grey04;
+            @extend .text-center;
+            @extend .f-medium;
+        }
+
+        &__wedding {
+            @extend .flex;
+            
+            .-wedding {
+                @extend .uppercase;
+                font-size: 6rem;
+                @extend .f-bold;
+            }
+
+
+            .title__text {
+                background: none;
+                @extend .lowercase;
+                @extend .f-m;
+                @extend .f-medium;
+                @extend .c-grey04;
+            }
+        }
+
+    }
 }
