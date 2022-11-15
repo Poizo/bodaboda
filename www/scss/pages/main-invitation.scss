@@ -12,25 +12,17 @@
     
     &.-fr {
         background-color: rgba($yellow, 0.1);
-
-        .title__wedding {
-
-        }
     }
     &.-nl {
         background-color: rgba($red, 0.1);
-        .title__wedding {
-
-        }
     }
     
     opacity: 1;
     min-height: 100vh;
     transition: opacity 2.2s cubic-bezier(1,-0.76, 1, 1.58);
 
-    @extend .py-l;
-    @extend .pl-xxl;
-    @extend .pr-l;
+    @extend .px-l;
+    @extend .py-m;
 
     .title {
         max-height: 50vh;
@@ -48,10 +40,18 @@
             @extend .flex-bottom;
             
             .-bruiloft {
-                width: 75%;
+                width: 60%;
                 @extend .m-none;
                 
-                #bruiloft_letter_gradient_1{
+                #bruiloft_letter_gradient_1,
+                #bruiloft_letter_gradient_2,
+                #bruiloft_letter_gradient_3,
+                #bruiloft_letter_gradient_4,
+                #bruiloft_letter_gradient_5,
+                #bruiloft_letter_gradient_6,
+                #bruiloft_letter_gradient_7,
+                #bruiloft_letter_gradient_8
+                {
                     .bruiloft_gradient_stop_1 {
                         stop-color: $red1;
                     }
@@ -65,131 +65,21 @@
                     }
 
                 }
-                #bruiloft_letter_gradient_2{
-                    .bruiloft_gradient_stop_1 {
-                        stop-color: $red1;
-                    }
-
-                    .bruiloft_gradient_stop_2 {
-                        stop-color: $red;
-                    }
-
-                    .bruiloft_gradient_stop_3 {
-                        stop-color: $red1;
-                    }
-
-                }
-                #bruiloft_letter_gradient_3{
-                    .bruiloft_gradient_stop_1 {
-                        stop-color: $red1;
-                    }
-
-                    .bruiloft_gradient_stop_2 {
-                        stop-color: $red;
-                    }
-
-                    .bruiloft_gradient_stop_3 {
-                        stop-color: $red1;
-                    }
-
-                }
-                #bruiloft_letter_gradient_4{
-                    .bruiloft_gradient_stop_1 {
-                        stop-color: $red1;
-                    }
-
-                    .bruiloft_gradient_stop_2 {
-                        stop-color: $red;
-                    }
-
-                    .bruiloft_gradient_stop_3 {
-                        stop-color: $red1;
-                    }
-
-                }
-                #bruiloft_letter_gradient_5{
-                    .bruiloft_gradient_stop_1 {
-                        stop-color: $red1;
-                    }
-
-                    .bruiloft_gradient_stop_2 {
-                        stop-color: $red;
-                    }
-
-                    .bruiloft_gradient_stop_3 {
-                        stop-color: $red1;
-                    }
-
-                }
-                #bruiloft_letter_gradient_6{
-                    .bruiloft_gradient_stop_1 {
-                        stop-color: $red1;
-                    }
-
-                    .bruiloft_gradient_stop_2 {
-                        stop-color: $red;
-                    }
-
-                    .bruiloft_gradient_stop_3 {
-                        stop-color: $red1;
-                    }
-
-                }
-                #bruiloft_letter_gradient_7{
-                    .bruiloft_gradient_stop_1 {
-                        stop-color: $red1;
-                    }
-
-                    .bruiloft_gradient_stop_2 {
-                        stop-color: $red;
-                    }
-
-                    .bruiloft_gradient_stop_3 {
-                        stop-color: $red1;
-                    }
-
-                }
-                #bruiloft_letter_gradient_8{
-                    .bruiloft_gradient_stop_1 {
-                        stop-color: $red1;
-                    }
-
-                    .bruiloft_gradient_stop_2 {
-                        stop-color: $red;
-                    }
-
-                    .bruiloft_gradient_stop_3 {
-                        stop-color: $red1;
-                    }
-
-                }
-                .bruiloft_letter_gradient_0{
-                    fill:url(#bruiloft_letter_gradient_1);
-                }
-                .bruiloft_letter_gradient_1{
-                    fill:url(#bruiloft_letter_gradient_2);
-                }
-                .bruiloft_letter_gradient_2{
-                    fill:url(#bruiloft_letter_gradient_3);
-                }
-                .bruiloft_letter_gradient_3{
-                    fill:url(#bruiloft_letter_gradient_4);
-                }
-                .bruiloft_letter_gradient_4{
-                    fill:url(#bruiloft_letter_gradient_5);
-                }
-                .bruiloft_letter_gradient_5{
-                    fill:url(#bruiloft_letter_gradient_6);
-                }
-                .bruiloft_letter_gradient_6{
-                    fill:url(#bruiloft_letter_gradient_7);
-                }
-                .bruiloft_letter_gradient_7{
-                    fill:url(#bruiloft_letter_gradient_8);
-                }
+                
+                .bruiloft_letter_gradient_0{ fill:url(#bruiloft_letter_gradient_1); }
+                .bruiloft_letter_gradient_1{ fill:url(#bruiloft_letter_gradient_2); }
+                .bruiloft_letter_gradient_2{ fill:url(#bruiloft_letter_gradient_3); }
+                .bruiloft_letter_gradient_3{ fill:url(#bruiloft_letter_gradient_4); }
+                .bruiloft_letter_gradient_4{ fill:url(#bruiloft_letter_gradient_5); }
+                .bruiloft_letter_gradient_5{ fill:url(#bruiloft_letter_gradient_6); }
+                .bruiloft_letter_gradient_6{ fill:url(#bruiloft_letter_gradient_7); }
+                .bruiloft_letter_gradient_7{ fill:url(#bruiloft_letter_gradient_8); }
             }
 
             .-mariage {
+                width: 60%;
+                @extend .m-none;
+                
                 .mariage_letter_gradient_0{fill:url(#mariage_letter_gradient_1);}
                 .mariage_letter_gradient_1{fill:url(#mariage_letter_gradient_2);}
                 .mariage_letter_gradient_2{fill:url(#mariage_letter_gradient_3);}
@@ -198,7 +88,14 @@
                 .mariage_letter_gradient_5{fill:url(#mariage_letter_gradient_6);}
                 .mariage_letter_gradient_6{fill:url(#mariage_letter_gradient_7);}
 
-                #mariage_letter_gradient_1 {
+                #mariage_letter_gradient_1,
+                #mariage_letter_gradient_2,
+                #mariage_letter_gradient_3,
+                #mariage_letter_gradient_4,
+                #mariage_letter_gradient_5,
+                #mariage_letter_gradient_6,
+                #mariage_letter_gradient_7
+                {
                     .mariage_letter_gradient_stop_1 {
                         stop-color: $yellow1;
                     }
@@ -209,79 +106,6 @@
                         stop-color: $yellow1;
                     }
                 }
-
-                #mariage_letter_gradient_2 {
-                    .mariage_letter_gradient_stop_1 {
-                        stop-color: $yellow1;
-                    }
-                    .mariage_letter_gradient_stop_2 {
-                        stop-color: $yellow;
-                    }
-                    .mariage_letter_gradient_stop_3 {
-                        stop-color: $yellow1;
-                    }
-                }
-
-                #mariage_letter_gradient_3 {
-                    .mariage_letter_gradient_stop_1 {
-                        stop-color: $yellow1;
-                    }
-                    .mariage_letter_gradient_stop_2 {
-                        stop-color: $yellow;
-                    }
-                    .mariage_letter_gradient_stop_3 {
-                        stop-color: $yellow1;
-                    }
-                }
-
-                #mariage_letter_gradient_4 {
-                    .mariage_letter_gradient_stop_1 {
-                        stop-color: $yellow1;
-                    }
-                    .mariage_letter_gradient_stop_2 {
-                        stop-color: $yellow;
-                    }
-                    .mariage_letter_gradient_stop_3 {
-                        stop-color: $yellow1;
-                    }
-                }
-
-                #mariage_letter_gradient_5 {
-                    .mariage_letter_gradient_stop_1 {
-                        stop-color: $yellow1;
-                    }
-                    .mariage_letter_gradient_stop_2 {
-                        stop-color: $yellow;
-                    }
-                    .mariage_letter_gradient_stop_3 {
-                        stop-color: $yellow1;
-                    }
-                }
-
-                #mariage_letter_gradient_6 {
-                    .mariage_letter_gradient_stop_1 {
-                        stop-color: $yellow1;
-                    }
-                    .mariage_letter_gradient_stop_2 {
-                        stop-color: $yellow;
-                    }
-                    .mariage_letter_gradient_stop_3 {
-                        stop-color: $yellow1;
-                    }
-                }
-
-                #mariage_letter_gradient_7 {
-                    .mariage_letter_gradient_stop_1 {
-                        stop-color: $yellow1;
-                    }
-                    .mariage_letter_gradient_stop_2 {
-                        stop-color: $yellow;
-                    }
-                    .mariage_letter_gradient_stop_3 {
-                        stop-color: $yellow1;
-                    }
-                }
-
             }
 
             .title__text {
@@ -293,5 +117,34 @@
             }
         }
 
+        &__names-svg {
+            .wedding_name_line {
+                @extend .hidden;
+            }
+            @media (min-width: 980px)  {
+                .wedding_name_column {
+                    display: none;
+                }
+                .wedding_name_line {
+                    display: block;
+                }
+            }
+
+            .wedding_name_charlotte {
+                path {
+                    fill: $yellow1;
+                }
+            }
+            .wedding_name_ampersand {
+                path {
+                    fill: $grey05;
+                }
+            }
+            .wedding_name_felix {
+                path {
+                    fill: $red1;
+                }
+            }
+        }
     }
 }
