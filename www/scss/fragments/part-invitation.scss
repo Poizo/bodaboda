@@ -1,0 +1,55 @@
+.part__invitation {
+    
+    @extend .py-xs;
+    @extend .px-s;
+    
+    &-title {
+        @extend .flex;
+        @extend .flex-center;
+        
+        &-separator {
+            @extend .px-xs;
+            @extend .flex;
+            @extend .flex-between;
+
+            .dot {
+                @extend .br-circle;
+                @extend .mx-xxs;
+
+                &1 {
+                    width: 10px;
+                    height: 10px;
+                    @extend .bg-grey01;
+                }
+                &2 {
+                    width: 14px;
+                    height: 14px;
+                    @extend .bg-grey02;
+                }
+                &3 {
+                    width: 18px;
+                    height: 18px;
+                    @extend .bg-grey03;
+                }
+                &4 {
+                    width: 22px;
+                    height: 22px;
+                    @extend .bg-grey04;
+                }
+                &5 {
+                    width: 26px;
+                    height: 26px;
+                    @extend .bg-grey05;
+                }
+            }
+        }
+
+        &-text {
+            @extend .f-medium;
+            @extend .f-xl;
+            @extend .text-center;
+            @extend .c-grey05;
+        }
+
+    }
+}

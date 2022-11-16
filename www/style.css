@@ -1965,7 +1965,7 @@ html {
   border-color: #efefef;
 }
 
-.bg-grey01 {
+.bg-grey01, .part__invitation-title-separator .dot1 {
   background-color: #efefef;
 }
 
@@ -1989,7 +1989,7 @@ html {
   border-color: #d1d0c6;
 }
 
-.bg-grey02 {
+.bg-grey02, .part__invitation-title-separator .dot2 {
   background-color: #d1d0c6;
 }
 
@@ -2013,7 +2013,7 @@ html {
   border-color: #a1a096;
 }
 
-.bg-grey03 {
+.bg-grey03, .part__invitation-title-separator .dot3 {
   background-color: #a1a096;
 }
 
@@ -2037,7 +2037,7 @@ html {
   border-color: #6b6b62;
 }
 
-.bg-grey04 {
+.bg-grey04, .part__invitation-title-separator .dot4 {
   background-color: #6b6b62;
 }
 
@@ -2061,7 +2061,7 @@ html {
   border-color: #383833;
 }
 
-.bg-grey05 {
+.bg-grey05, .part__invitation-title-separator .dot5 {
   background-color: #383833;
 }
 
@@ -2069,7 +2069,7 @@ html {
   background-color: #383833;
 }
 
-.c-grey05 {
+.c-grey05, .part__invitation-title-text {
   color: #383833;
 }
 
@@ -2149,7 +2149,7 @@ html {
   border-radius: 0;
 }
 
-.br-circle {
+.br-circle, .part__invitation-title-separator .dot {
   border-radius: 50%;
 }
 
@@ -2443,7 +2443,7 @@ html {
   margin: 4px;
 }
 
-.mx-xxs {
+.mx-xxs, .part__invitation-title-separator .dot {
   margin-left: 4px;
   margin-right: 4px;
 }
@@ -2663,12 +2663,12 @@ html {
   padding: 8px;
 }
 
-.px-xs {
+.px-xs, .part__invitation-title-separator {
   padding-left: 8px;
   padding-right: 8px;
 }
 
-.py-xs {
+.py-xs, .part__invitation {
   padding-top: 8px;
   padding-bottom: 8px;
 }
@@ -2853,7 +2853,7 @@ html {
   padding: 12px;
 }
 
-.px-s, .aside-menu {
+.px-s, .part__invitation, .aside-menu {
   padding-left: 12px;
   padding-right: 12px;
 }
@@ -3915,7 +3915,7 @@ html {
   box-sizing: border-box;
 }
 
-.flex, .title__wedding, .aside-menu.-open .aside-menu__content, .language-selection-page .FC .language_container, .language-selection-page .FC, .row {
+.flex, .part__invitation-title-separator, .part__invitation-title, .title__wedding, .aside-menu.-open .aside-menu__content, .language-selection-page .FC .language_container, .language-selection-page .FC, .row {
   display: flex;
 }
 
@@ -3923,7 +3923,7 @@ html {
   justify-content: flex-start;
 }
 
-.flex-center, .title__wedding, .aside-menu.-open .aside-menu__content, .language-selection-page .FC .language_container, .language-selection-page .FC {
+.flex-center, .part__invitation-title, .title__wedding, .aside-menu.-open .aside-menu__content, .language-selection-page .FC .language_container, .language-selection-page .FC {
   justify-content: center;
 }
 
@@ -3935,7 +3935,7 @@ html {
   justify-content: space-around;
 }
 
-.flex-between {
+.flex-between, .part__invitation-title-separator {
   justify-content: space-between;
 }
 
@@ -3974,7 +3974,7 @@ html {
   justify-content: space-around;
 }
 
-.flex-between {
+.flex-between, .part__invitation-title-separator {
   justify-content: space-between;
 }
 
@@ -4062,7 +4062,7 @@ html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-.f-medium, .title__wedding .title__text, .title__text, h4, h5, h6 {
+.f-medium, .part__invitation-title-text, .title__wedding .title__text, .title__text, h4, h5, h6 {
   font-family: "Comfortaa-Medium";
 }
 
@@ -4118,7 +4118,7 @@ html {
   font-size: 1.125rem;
 }
 
-.f-xl, .aside-menu__opener > span {
+.f-xl, .part__invitation-title-text, .aside-menu__opener > span {
   font-size: 1.25rem;
 }
 
@@ -4130,7 +4130,7 @@ html {
   text-align: left;
 }
 
-.text-center, .title__text, .aside-menu__content .language-button > span, .language-selection-page .FC .language_container .choose-language-button > span {
+.text-center, .part__invitation-title-text, .title__text, .aside-menu__content .language-button > span, .language-selection-page .FC .language_container .choose-language-button > span {
   text-align: center;
 }
 
@@ -5078,8 +5078,115 @@ svg {
     fill: rgba(249, 233, 39, 0.5);
   }
 }
-.title {
-  max-height: 50vh;
+@-webkit-keyframes stopColorCharlotte {
+  0% {
+    stop-color: rgba(249, 233, 39, 0.5);
+  }
+  50% {
+    stop-color: #f9d924fb;
+  }
+  100% {
+    stop-color: rgba(249, 233, 39, 0.5);
+  }
+}
+@-moz-keyframes stopColorCharlotte {
+  0% {
+    stop-color: rgba(249, 233, 39, 0.5);
+  }
+  50% {
+    stop-color: #f9d924fb;
+  }
+  100% {
+    stop-color: rgba(249, 233, 39, 0.5);
+  }
+}
+@keyframes stopColorCharlotte {
+  0% {
+    stop-color: rgba(249, 233, 39, 0.5);
+  }
+  50% {
+    stop-color: #f9d924fb;
+  }
+  100% {
+    stop-color: rgba(249, 233, 39, 0.5);
+  }
+}
+@-ms-keyframes stopColorCharlotte {
+  0% {
+    stop-color: rgba(249, 233, 39, 0.5);
+  }
+  50% {
+    stop-color: #f9d924fb;
+  }
+  100% {
+    stop-color: rgba(249, 233, 39, 0.5);
+  }
+}
+@-o-keyframes stopColorCharlotte {
+  0% {
+    stop-color: rgba(249, 233, 39, 0.5);
+  }
+  50% {
+    stop-color: #f9d924fb;
+  }
+  100% {
+    stop-color: rgba(249, 233, 39, 0.5);
+  }
+}
+@-webkit-keyframes stopColorFelix {
+  0% {
+    stop-color: rgba(227, 6, 19, 0.5);
+  }
+  50% {
+    stop-color: #9D1D06;
+  }
+  100% {
+    stop-color: rgba(227, 6, 19, 0.5);
+  }
+}
+@-moz-keyframes stopColorFelix {
+  0% {
+    stop-color: rgba(227, 6, 19, 0.5);
+  }
+  50% {
+    stop-color: #9D1D06;
+  }
+  100% {
+    stop-color: rgba(227, 6, 19, 0.5);
+  }
+}
+@keyframes stopColorFelix {
+  0% {
+    stop-color: rgba(227, 6, 19, 0.5);
+  }
+  50% {
+    stop-color: #9D1D06;
+  }
+  100% {
+    stop-color: rgba(227, 6, 19, 0.5);
+  }
+}
+@-ms-keyframes stopColorFelix {
+  0% {
+    stop-color: rgba(227, 6, 19, 0.5);
+  }
+  50% {
+    stop-color: #9D1D06;
+  }
+  100% {
+    stop-color: rgba(227, 6, 19, 0.5);
+  }
+}
+@-o-keyframes stopColorFelix {
+  0% {
+    stop-color: rgba(227, 6, 19, 0.5);
+  }
+  50% {
+    stop-color: #9D1D06;
+  }
+  100% {
+    stop-color: rgba(227, 6, 19, 0.5);
+  }
 }
 .title__wedding .-bruiloft {
   width: 40%;
@@ -5092,7 +5199,7 @@ svg {
 .title__wedding .-bruiloft #bruiloft_letter_gradient_6 .bruiloft_gradient_stop_1,
 .title__wedding .-bruiloft #bruiloft_letter_gradient_7 .bruiloft_gradient_stop_1,
 .title__wedding .-bruiloft #bruiloft_letter_gradient_8 .bruiloft_gradient_stop_1 {
-  stop-color: #9D1D06;
+  animation: stopColorFelix 10s ease-in-out infinite;
 }
 .title__wedding .-bruiloft #bruiloft_letter_gradient_1 .bruiloft_gradient_stop_2,
 .title__wedding .-bruiloft #bruiloft_letter_gradient_2 .bruiloft_gradient_stop_2,
@@ -5112,7 +5219,7 @@ svg {
 .title__wedding .-bruiloft #bruiloft_letter_gradient_6 .bruiloft_gradient_stop_3,
 .title__wedding .-bruiloft #bruiloft_letter_gradient_7 .bruiloft_gradient_stop_3,
 .title__wedding .-bruiloft #bruiloft_letter_gradient_8 .bruiloft_gradient_stop_3 {
-  stop-color: #9D1D06;
+  animation: stopColorFelix 10s ease-in-out infinite;
 }
 .title__wedding .-bruiloft .bruiloft_letter_gradient_0 {
   fill: url(#bruiloft_letter_gradient_1);
@@ -5169,7 +5276,7 @@ svg {
 .title__wedding .-mariage #mariage_letter_gradient_5 .mariage_letter_gradient_stop_1,
 .title__wedding .-mariage #mariage_letter_gradient_6 .mariage_letter_gradient_stop_1,
 .title__wedding .-mariage #mariage_letter_gradient_7 .mariage_letter_gradient_stop_1 {
-  stop-color: #f9d924fb;
+  animation: stopColorCharlotte 10s ease-in-out infinite;
 }
 .title__wedding .-mariage #mariage_letter_gradient_1 .mariage_letter_gradient_stop_2,
 .title__wedding .-mariage #mariage_letter_gradient_2 .mariage_letter_gradient_stop_2,
@@ -5187,7 +5294,7 @@ svg {
 .title__wedding .-mariage #mariage_letter_gradient_5 .mariage_letter_gradient_stop_3,
 .title__wedding .-mariage #mariage_letter_gradient_6 .mariage_letter_gradient_stop_3,
 .title__wedding .-mariage #mariage_letter_gradient_7 .mariage_letter_gradient_stop_3 {
-  stop-color: #f9d924fb;
+  animation: stopColorCharlotte 10s ease-in-out infinite;
 }
 .title__wedding .title__text {
   background: none;
@@ -5223,16 +5330,37 @@ svg {
 }
 
 .main-invitation.-fr .title .title__names-svg .wedding_name_decoration .wedding_name_heart {
-  animation: fillCurve3Charlotte 60s ease-in-out infinite;
+  animation: fillCurve3Charlotte 30s ease-in-out infinite;
 }
 .main-invitation.-fr .title .title__names-svg .wedding_name_decoration_curve3 {
-  animation: fillCurve3Charlotte 60s ease-in-out infinite;
+  animation: fillCurve3Charlotte 30s ease-in-out infinite;
 }
 .main-invitation.-nl .title .title__names-svg .wedding_name_decoration .wedding_name_heart {
-  animation: fillCurve3Felix 15s ease-in-out infinite;
+  animation: fillCurve3Felix 30s ease-in-out infinite;
 }
 .main-invitation.-nl .title .title__names-svg .wedding_name_decoration_curve3 {
-  animation: fillCurve3Felix 15s ease-in-out infinite;
+  animation: fillCurve3Felix 30s ease-in-out infinite;
+}
+
+.part__invitation-title-separator .dot1 {
+  width: 10px;
+  height: 10px;
+}
+.part__invitation-title-separator .dot2 {
+  width: 14px;
+  height: 14px;
+}
+.part__invitation-title-separator .dot3 {
+  width: 18px;
+  height: 18px;
+}
+.part__invitation-title-separator .dot4 {
+  width: 22px;
+  height: 22px;
+}
+.part__invitation-title-separator .dot5 {
+  width: 26px;
+  height: 26px;
 }
 
 /*# sourceMappingURL=style.css.map */

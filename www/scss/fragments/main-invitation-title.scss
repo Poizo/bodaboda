@@ -47,9 +47,31 @@
     }
 }
 
-.title {
-    max-height: 50vh;
+@include keyframes(stopColorCharlotte) {
+    0% {
+        stop-color: rgba($yellow, .5);
+    }
+    50% {
+        stop-color: $yellow1;
+    }
+    100% {
+        stop-color: rgba($yellow, .5);
+    }
+}
 
+@include keyframes(stopColorFelix) {
+    0% {
+        stop-color: rgba($red, .5);
+    }
+    50% {
+        stop-color: $red1;
+    }
+    100% {
+        stop-color: rgba($red, .5);
+    }
+}
+
+.title {
     &__text {
         @extend .block;
         @extend .c-grey04;
@@ -76,7 +98,7 @@
             #bruiloft_letter_gradient_8
             {
                 .bruiloft_gradient_stop_1 {
-                    stop-color: $red1;
+                    animation: stopColorFelix 10s ease-in-out infinite;
                 }
 
                 .bruiloft_gradient_stop_2 {
@@ -84,7 +106,7 @@
                 }
 
                 .bruiloft_gradient_stop_3 {
-                    stop-color: $red1;
+                    animation: stopColorFelix 10s ease-in-out infinite;
                 }
 
             }
@@ -120,13 +142,13 @@
             #mariage_letter_gradient_7
             {
                 .mariage_letter_gradient_stop_1 {
-                    stop-color: $yellow1;
+                    animation: stopColorCharlotte 10s ease-in-out infinite;
                 }
                 .mariage_letter_gradient_stop_2 {
                     stop-color: $yellow;
                 }
                 .mariage_letter_gradient_stop_3 {
-                    stop-color: $yellow1;
+                    animation: stopColorCharlotte 10s ease-in-out infinite;
                 }
             }
         }
@@ -197,12 +219,12 @@
             .title__names-svg {
                 .wedding_name_decoration {
                     .wedding_name_heart {
-                        animation: fillCurve3Charlotte 60s ease-in-out infinite;
+                        animation: fillCurve3Charlotte 30s ease-in-out infinite;
                     }
 
                     &_curve {
                         &3 {
-                            animation: fillCurve3Charlotte 60s ease-in-out infinite;
+                            animation: fillCurve3Charlotte 30s ease-in-out infinite;
                         }
                     }
                 }
@@ -215,12 +237,12 @@
             .title__names-svg {
                 .wedding_name_decoration {
                     .wedding_name_heart {
-                        animation: fillCurve3Felix 15s ease-in-out infinite;
+                        animation: fillCurve3Felix 30s ease-in-out infinite;
                     }
 
                     &_curve {
                         &3 {
-                            animation: fillCurve3Felix 15s ease-in-out infinite;
+                            animation: fillCurve3Felix 30s ease-in-out infinite;
                         }
                     }
                 }
