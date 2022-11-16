@@ -72,6 +72,8 @@
 }
 
 .title {
+    @extend .pb-m;
+
     &__text {
         @extend .block;
         @extend .c-grey04;

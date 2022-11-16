@@ -10,33 +10,55 @@
         &-separator {
             @extend .px-xs;
             @extend .flex;
+            @extend .flex-middle;
             @extend .flex-between;
 
+            &:nth-of-type(2) {
+                flex-direction: row-reverse;
+            }
+
             .dot {
+                @extend .relative;
                 @extend .br-circle;
                 @extend .mx-xxs;
 
-                &1 {
+                &:after {
+                    content: '';
+                    @extend .absolute;
+                    @extend .br-circle;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                }
+
+                @media (max-width: 768px) {
+                    &.nth1,&.nth2 {
+                        display: none;
+                    }
+                }
+
+                &.nth1 {
                     width: 10px;
                     height: 10px;
                     @extend .bg-grey01;
                 }
-                &2 {
+                &.nth2 {
                     width: 14px;
                     height: 14px;
                     @extend .bg-grey02;
                 }
-                &3 {
+                &.nth3 {
                     width: 18px;
                     height: 18px;
                     @extend .bg-grey03;
                 }
-                &4 {
+                &.nth4 {
                     width: 22px;
                     height: 22px;
                     @extend .bg-grey04;
                 }
-                &5 {
+                &.nth5 {
                     width: 26px;
                     height: 26px;
                     @extend .bg-grey05;
@@ -45,11 +67,56 @@
         }
 
         &-text {
+            @extend .relative;
+            @extend .block;
+            @extend .px-m;
+            @extend .py-s;
             @extend .f-medium;
             @extend .f-xl;
             @extend .text-center;
             @extend .c-grey05;
+
+            &:after {
+                content: '';
+                height: 2px;
+                @extend .w-100;
+                @extend .absolute;
+                left: 0;
+                bottom: 4px;
+            }
+
         }
 
     }
+}
+
+.main-invitation {
+    &.-fr {
+        .part__invitation-title-text {
+            &:after {
+                background-color: $yellow;
+            }
+        }
+
+        .part__invitation-title-separator {
+            .dot:after {
+                background-color: rgba($yellow1, .5);
+            }
+        }
+    }
+
+    &.-nl {
+        .part__invitation-title-text {
+            &:after {
+                background-color: $red;
+            }
+        }
+
+        .part__invitation-title-separator {
+            .dot:after {
+                background-color: rgba($red1, .5);
+            }
+        }
+    }
+
 }
