@@ -2045,7 +2045,7 @@ html {
   background-color: #6b6b62;
 }
 
-.c-grey04, .main-invitation .title__wedding .title__text, .main-invitation .title__text {
+.c-grey04, .title__wedding .title__text, .title__text {
   color: #6b6b62;
 }
 
@@ -3669,7 +3669,7 @@ html {
   padding-left: 0;
 }
 
-.m-none, .main-invitation .title__wedding .-mariage, .main-invitation .title__wedding .-bruiloft, body {
+.m-none, .title__wedding .-mariage, .title__wedding .-bruiloft, body {
   margin: 0;
 }
 
@@ -3707,7 +3707,7 @@ html {
   margin-left: auto;
 }
 
-.block, .main-invitation .title__text, .aside-menu__content .language-button > span, .language-selection-page .FC .language_container .choose-language-button > span {
+.block, .title__text, .aside-menu__content .language-button > span, .language-selection-page .FC .language_container .choose-language-button > span {
   display: block;
 }
 
@@ -3719,7 +3719,7 @@ html {
   display: inline-flex;
 }
 
-.hidden, .main-invitation .title__names-svg .wedding_name_line, .aside-menu__content {
+.hidden, .title__names-svg .wedding_name_line, .aside-menu__content {
   display: none;
 }
 
@@ -3915,7 +3915,7 @@ html {
   box-sizing: border-box;
 }
 
-.flex, .main-invitation .title__wedding, .aside-menu.-open .aside-menu__content, .language-selection-page .FC .language_container, .language-selection-page .FC, .row {
+.flex, .title__wedding, .aside-menu.-open .aside-menu__content, .language-selection-page .FC .language_container, .language-selection-page .FC, .row {
   display: flex;
 }
 
@@ -3923,7 +3923,7 @@ html {
   justify-content: flex-start;
 }
 
-.flex-center, .main-invitation .title__wedding, .aside-menu.-open .aside-menu__content, .language-selection-page .FC .language_container, .language-selection-page .FC {
+.flex-center, .title__wedding, .aside-menu.-open .aside-menu__content, .language-selection-page .FC .language_container, .language-selection-page .FC {
   justify-content: center;
 }
 
@@ -3949,7 +3949,7 @@ html {
   box-pack: center;
 }
 
-.flex-bottom, .main-invitation .title__wedding {
+.flex-bottom, .title__wedding {
   align-items: flex-end;
   box-pack: end;
 }
@@ -4062,7 +4062,7 @@ html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-.f-medium, .main-invitation .title__wedding .title__text, .main-invitation .title__text, h4, h5, h6 {
+.f-medium, .title__wedding .title__text, .title__text, h4, h5, h6 {
   font-family: "Comfortaa-Medium";
 }
 
@@ -4110,7 +4110,7 @@ html {
   font-size: 0.875rem;
 }
 
-.f-m, .main-invitation .title__wedding .title__text {
+.f-m, .title__wedding .title__text {
   font-size: 1rem;
 }
 
@@ -4130,7 +4130,7 @@ html {
   text-align: left;
 }
 
-.text-center, .main-invitation .title__text, .aside-menu__content .language-button > span, .language-selection-page .FC .language_container .choose-language-button > span {
+.text-center, .title__text, .aside-menu__content .language-button > span, .language-selection-page .FC .language_container .choose-language-button > span {
   text-align: center;
 }
 
@@ -4150,7 +4150,7 @@ html {
   text-transform: uppercase;
 }
 
-.lowercase, .main-invitation .title__wedding .title__text {
+.lowercase, .title__wedding .title__text {
   text-transform: lowercase;
 }
 
@@ -4857,136 +4857,382 @@ svg {
 .main-invitation.-nl {
   background-color: rgba(227, 6, 19, 0.1);
 }
-.main-invitation .title {
+
+@-webkit-keyframes fillCurve1 {
+  0% {
+    fill: #efefef;
+  }
+  50% {
+    fill: #383833;
+  }
+  100% {
+    fill: #efefef;
+  }
+}
+@-moz-keyframes fillCurve1 {
+  0% {
+    fill: #efefef;
+  }
+  50% {
+    fill: #383833;
+  }
+  100% {
+    fill: #efefef;
+  }
+}
+@keyframes fillCurve1 {
+  0% {
+    fill: #efefef;
+  }
+  50% {
+    fill: #383833;
+  }
+  100% {
+    fill: #efefef;
+  }
+}
+@-ms-keyframes fillCurve1 {
+  0% {
+    fill: #efefef;
+  }
+  50% {
+    fill: #383833;
+  }
+  100% {
+    fill: #efefef;
+  }
+}
+@-o-keyframes fillCurve1 {
+  0% {
+    fill: #efefef;
+  }
+  50% {
+    fill: #383833;
+  }
+  100% {
+    fill: #efefef;
+  }
+}
+@-webkit-keyframes fillCurve2 {
+  0% {
+    fill: #383833;
+  }
+  50% {
+    fill: #efefef;
+  }
+  100% {
+    fill: #383833;
+  }
+}
+@-moz-keyframes fillCurve2 {
+  0% {
+    fill: #383833;
+  }
+  50% {
+    fill: #efefef;
+  }
+  100% {
+    fill: #383833;
+  }
+}
+@keyframes fillCurve2 {
+  0% {
+    fill: #383833;
+  }
+  50% {
+    fill: #efefef;
+  }
+  100% {
+    fill: #383833;
+  }
+}
+@-ms-keyframes fillCurve2 {
+  0% {
+    fill: #383833;
+  }
+  50% {
+    fill: #efefef;
+  }
+  100% {
+    fill: #383833;
+  }
+}
+@-o-keyframes fillCurve2 {
+  0% {
+    fill: #383833;
+  }
+  50% {
+    fill: #efefef;
+  }
+  100% {
+    fill: #383833;
+  }
+}
+@-webkit-keyframes fillCurve3Felix {
+  0% {
+    fill: rgba(227, 6, 19, 0.5);
+  }
+  50% {
+    fill: #9D1D06;
+  }
+  100% {
+    fill: rgba(227, 6, 19, 0.5);
+  }
+}
+@-moz-keyframes fillCurve3Felix {
+  0% {
+    fill: rgba(227, 6, 19, 0.5);
+  }
+  50% {
+    fill: #9D1D06;
+  }
+  100% {
+    fill: rgba(227, 6, 19, 0.5);
+  }
+}
+@keyframes fillCurve3Felix {
+  0% {
+    fill: rgba(227, 6, 19, 0.5);
+  }
+  50% {
+    fill: #9D1D06;
+  }
+  100% {
+    fill: rgba(227, 6, 19, 0.5);
+  }
+}
+@-ms-keyframes fillCurve3Felix {
+  0% {
+    fill: rgba(227, 6, 19, 0.5);
+  }
+  50% {
+    fill: #9D1D06;
+  }
+  100% {
+    fill: rgba(227, 6, 19, 0.5);
+  }
+}
+@-o-keyframes fillCurve3Felix {
+  0% {
+    fill: rgba(227, 6, 19, 0.5);
+  }
+  50% {
+    fill: #9D1D06;
+  }
+  100% {
+    fill: rgba(227, 6, 19, 0.5);
+  }
+}
+@-webkit-keyframes fillCurve3Charlotte {
+  0% {
+    fill: rgba(249, 233, 39, 0.5);
+  }
+  50% {
+    fill: #f9d924fb;
+  }
+  100% {
+    fill: rgba(249, 233, 39, 0.5);
+  }
+}
+@-moz-keyframes fillCurve3Charlotte {
+  0% {
+    fill: rgba(249, 233, 39, 0.5);
+  }
+  50% {
+    fill: #f9d924fb;
+  }
+  100% {
+    fill: rgba(249, 233, 39, 0.5);
+  }
+}
+@keyframes fillCurve3Charlotte {
+  0% {
+    fill: rgba(249, 233, 39, 0.5);
+  }
+  50% {
+    fill: #f9d924fb;
+  }
+  100% {
+    fill: rgba(249, 233, 39, 0.5);
+  }
+}
+@-ms-keyframes fillCurve3Charlotte {
+  0% {
+    fill: rgba(249, 233, 39, 0.5);
+  }
+  50% {
+    fill: #f9d924fb;
+  }
+  100% {
+    fill: rgba(249, 233, 39, 0.5);
+  }
+}
+@-o-keyframes fillCurve3Charlotte {
+  0% {
+    fill: rgba(249, 233, 39, 0.5);
+  }
+  50% {
+    fill: #f9d924fb;
+  }
+  100% {
+    fill: rgba(249, 233, 39, 0.5);
+  }
+}
+.title {
   max-height: 50vh;
 }
-.main-invitation .title__wedding .-bruiloft {
-  width: 60%;
+.title__wedding .-bruiloft {
+  width: 40%;
 }
-.main-invitation .title__wedding .-bruiloft #bruiloft_letter_gradient_1 .bruiloft_gradient_stop_1,
-.main-invitation .title__wedding .-bruiloft #bruiloft_letter_gradient_2 .bruiloft_gradient_stop_1,
-.main-invitation .title__wedding .-bruiloft #bruiloft_letter_gradient_3 .bruiloft_gradient_stop_1,
-.main-invitation .title__wedding .-bruiloft #bruiloft_letter_gradient_4 .bruiloft_gradient_stop_1,
-.main-invitation .title__wedding .-bruiloft #bruiloft_letter_gradient_5 .bruiloft_gradient_stop_1,
-.main-invitation .title__wedding .-bruiloft #bruiloft_letter_gradient_6 .bruiloft_gradient_stop_1,
-.main-invitation .title__wedding .-bruiloft #bruiloft_letter_gradient_7 .bruiloft_gradient_stop_1,
-.main-invitation .title__wedding .-bruiloft #bruiloft_letter_gradient_8 .bruiloft_gradient_stop_1 {
+.title__wedding .-bruiloft #bruiloft_letter_gradient_1 .bruiloft_gradient_stop_1,
+.title__wedding .-bruiloft #bruiloft_letter_gradient_2 .bruiloft_gradient_stop_1,
+.title__wedding .-bruiloft #bruiloft_letter_gradient_3 .bruiloft_gradient_stop_1,
+.title__wedding .-bruiloft #bruiloft_letter_gradient_4 .bruiloft_gradient_stop_1,
+.title__wedding .-bruiloft #bruiloft_letter_gradient_5 .bruiloft_gradient_stop_1,
+.title__wedding .-bruiloft #bruiloft_letter_gradient_6 .bruiloft_gradient_stop_1,
+.title__wedding .-bruiloft #bruiloft_letter_gradient_7 .bruiloft_gradient_stop_1,
+.title__wedding .-bruiloft #bruiloft_letter_gradient_8 .bruiloft_gradient_stop_1 {
   stop-color: #9D1D06;
 }
-.main-invitation .title__wedding .-bruiloft #bruiloft_letter_gradient_1 .bruiloft_gradient_stop_2,
-.main-invitation .title__wedding .-bruiloft #bruiloft_letter_gradient_2 .bruiloft_gradient_stop_2,
-.main-invitation .title__wedding .-bruiloft #bruiloft_letter_gradient_3 .bruiloft_gradient_stop_2,
-.main-invitation .title__wedding .-bruiloft #bruiloft_letter_gradient_4 .bruiloft_gradient_stop_2,
-.main-invitation .title__wedding .-bruiloft #bruiloft_letter_gradient_5 .bruiloft_gradient_stop_2,
-.main-invitation .title__wedding .-bruiloft #bruiloft_letter_gradient_6 .bruiloft_gradient_stop_2,
-.main-invitation .title__wedding .-bruiloft #bruiloft_letter_gradient_7 .bruiloft_gradient_stop_2,
-.main-invitation .title__wedding .-bruiloft #bruiloft_letter_gradient_8 .bruiloft_gradient_stop_2 {
+.title__wedding .-bruiloft #bruiloft_letter_gradient_1 .bruiloft_gradient_stop_2,
+.title__wedding .-bruiloft #bruiloft_letter_gradient_2 .bruiloft_gradient_stop_2,
+.title__wedding .-bruiloft #bruiloft_letter_gradient_3 .bruiloft_gradient_stop_2,
+.title__wedding .-bruiloft #bruiloft_letter_gradient_4 .bruiloft_gradient_stop_2,
+.title__wedding .-bruiloft #bruiloft_letter_gradient_5 .bruiloft_gradient_stop_2,
+.title__wedding .-bruiloft #bruiloft_letter_gradient_6 .bruiloft_gradient_stop_2,
+.title__wedding .-bruiloft #bruiloft_letter_gradient_7 .bruiloft_gradient_stop_2,
+.title__wedding .-bruiloft #bruiloft_letter_gradient_8 .bruiloft_gradient_stop_2 {
   stop-color: #E30613;
 }
-.main-invitation .title__wedding .-bruiloft #bruiloft_letter_gradient_1 .bruiloft_gradient_stop_3,
-.main-invitation .title__wedding .-bruiloft #bruiloft_letter_gradient_2 .bruiloft_gradient_stop_3,
-.main-invitation .title__wedding .-bruiloft #bruiloft_letter_gradient_3 .bruiloft_gradient_stop_3,
-.main-invitation .title__wedding .-bruiloft #bruiloft_letter_gradient_4 .bruiloft_gradient_stop_3,
-.main-invitation .title__wedding .-bruiloft #bruiloft_letter_gradient_5 .bruiloft_gradient_stop_3,
-.main-invitation .title__wedding .-bruiloft #bruiloft_letter_gradient_6 .bruiloft_gradient_stop_3,
-.main-invitation .title__wedding .-bruiloft #bruiloft_letter_gradient_7 .bruiloft_gradient_stop_3,
-.main-invitation .title__wedding .-bruiloft #bruiloft_letter_gradient_8 .bruiloft_gradient_stop_3 {
+.title__wedding .-bruiloft #bruiloft_letter_gradient_1 .bruiloft_gradient_stop_3,
+.title__wedding .-bruiloft #bruiloft_letter_gradient_2 .bruiloft_gradient_stop_3,
+.title__wedding .-bruiloft #bruiloft_letter_gradient_3 .bruiloft_gradient_stop_3,
+.title__wedding .-bruiloft #bruiloft_letter_gradient_4 .bruiloft_gradient_stop_3,
+.title__wedding .-bruiloft #bruiloft_letter_gradient_5 .bruiloft_gradient_stop_3,
+.title__wedding .-bruiloft #bruiloft_letter_gradient_6 .bruiloft_gradient_stop_3,
+.title__wedding .-bruiloft #bruiloft_letter_gradient_7 .bruiloft_gradient_stop_3,
+.title__wedding .-bruiloft #bruiloft_letter_gradient_8 .bruiloft_gradient_stop_3 {
   stop-color: #9D1D06;
 }
-.main-invitation .title__wedding .-bruiloft .bruiloft_letter_gradient_0 {
+.title__wedding .-bruiloft .bruiloft_letter_gradient_0 {
   fill: url(#bruiloft_letter_gradient_1);
 }
-.main-invitation .title__wedding .-bruiloft .bruiloft_letter_gradient_1 {
+.title__wedding .-bruiloft .bruiloft_letter_gradient_1 {
   fill: url(#bruiloft_letter_gradient_2);
 }
-.main-invitation .title__wedding .-bruiloft .bruiloft_letter_gradient_2 {
+.title__wedding .-bruiloft .bruiloft_letter_gradient_2 {
   fill: url(#bruiloft_letter_gradient_3);
 }
-.main-invitation .title__wedding .-bruiloft .bruiloft_letter_gradient_3 {
+.title__wedding .-bruiloft .bruiloft_letter_gradient_3 {
   fill: url(#bruiloft_letter_gradient_4);
 }
-.main-invitation .title__wedding .-bruiloft .bruiloft_letter_gradient_4 {
+.title__wedding .-bruiloft .bruiloft_letter_gradient_4 {
   fill: url(#bruiloft_letter_gradient_5);
 }
-.main-invitation .title__wedding .-bruiloft .bruiloft_letter_gradient_5 {
+.title__wedding .-bruiloft .bruiloft_letter_gradient_5 {
   fill: url(#bruiloft_letter_gradient_6);
 }
-.main-invitation .title__wedding .-bruiloft .bruiloft_letter_gradient_6 {
+.title__wedding .-bruiloft .bruiloft_letter_gradient_6 {
   fill: url(#bruiloft_letter_gradient_7);
 }
-.main-invitation .title__wedding .-bruiloft .bruiloft_letter_gradient_7 {
+.title__wedding .-bruiloft .bruiloft_letter_gradient_7 {
   fill: url(#bruiloft_letter_gradient_8);
 }
-.main-invitation .title__wedding .-mariage {
-  width: 60%;
+.title__wedding .-mariage {
+  width: 40%;
 }
-.main-invitation .title__wedding .-mariage .mariage_letter_gradient_0 {
+.title__wedding .-mariage .mariage_letter_gradient_0 {
   fill: url(#mariage_letter_gradient_1);
 }
-.main-invitation .title__wedding .-mariage .mariage_letter_gradient_1 {
+.title__wedding .-mariage .mariage_letter_gradient_1 {
   fill: url(#mariage_letter_gradient_2);
 }
-.main-invitation .title__wedding .-mariage .mariage_letter_gradient_2 {
+.title__wedding .-mariage .mariage_letter_gradient_2 {
   fill: url(#mariage_letter_gradient_3);
 }
-.main-invitation .title__wedding .-mariage .mariage_letter_gradient_3 {
+.title__wedding .-mariage .mariage_letter_gradient_3 {
   fill: url(#mariage_letter_gradient_4);
 }
-.main-invitation .title__wedding .-mariage .mariage_letter_gradient_4 {
+.title__wedding .-mariage .mariage_letter_gradient_4 {
   fill: url(#mariage_letter_gradient_5);
 }
-.main-invitation .title__wedding .-mariage .mariage_letter_gradient_5 {
+.title__wedding .-mariage .mariage_letter_gradient_5 {
   fill: url(#mariage_letter_gradient_6);
 }
-.main-invitation .title__wedding .-mariage .mariage_letter_gradient_6 {
+.title__wedding .-mariage .mariage_letter_gradient_6 {
   fill: url(#mariage_letter_gradient_7);
 }
-.main-invitation .title__wedding .-mariage #mariage_letter_gradient_1 .mariage_letter_gradient_stop_1,
-.main-invitation .title__wedding .-mariage #mariage_letter_gradient_2 .mariage_letter_gradient_stop_1,
-.main-invitation .title__wedding .-mariage #mariage_letter_gradient_3 .mariage_letter_gradient_stop_1,
-.main-invitation .title__wedding .-mariage #mariage_letter_gradient_4 .mariage_letter_gradient_stop_1,
-.main-invitation .title__wedding .-mariage #mariage_letter_gradient_5 .mariage_letter_gradient_stop_1,
-.main-invitation .title__wedding .-mariage #mariage_letter_gradient_6 .mariage_letter_gradient_stop_1,
-.main-invitation .title__wedding .-mariage #mariage_letter_gradient_7 .mariage_letter_gradient_stop_1 {
+.title__wedding .-mariage #mariage_letter_gradient_1 .mariage_letter_gradient_stop_1,
+.title__wedding .-mariage #mariage_letter_gradient_2 .mariage_letter_gradient_stop_1,
+.title__wedding .-mariage #mariage_letter_gradient_3 .mariage_letter_gradient_stop_1,
+.title__wedding .-mariage #mariage_letter_gradient_4 .mariage_letter_gradient_stop_1,
+.title__wedding .-mariage #mariage_letter_gradient_5 .mariage_letter_gradient_stop_1,
+.title__wedding .-mariage #mariage_letter_gradient_6 .mariage_letter_gradient_stop_1,
+.title__wedding .-mariage #mariage_letter_gradient_7 .mariage_letter_gradient_stop_1 {
   stop-color: #f9d924fb;
 }
-.main-invitation .title__wedding .-mariage #mariage_letter_gradient_1 .mariage_letter_gradient_stop_2,
-.main-invitation .title__wedding .-mariage #mariage_letter_gradient_2 .mariage_letter_gradient_stop_2,
-.main-invitation .title__wedding .-mariage #mariage_letter_gradient_3 .mariage_letter_gradient_stop_2,
-.main-invitation .title__wedding .-mariage #mariage_letter_gradient_4 .mariage_letter_gradient_stop_2,
-.main-invitation .title__wedding .-mariage #mariage_letter_gradient_5 .mariage_letter_gradient_stop_2,
-.main-invitation .title__wedding .-mariage #mariage_letter_gradient_6 .mariage_letter_gradient_stop_2,
-.main-invitation .title__wedding .-mariage #mariage_letter_gradient_7 .mariage_letter_gradient_stop_2 {
+.title__wedding .-mariage #mariage_letter_gradient_1 .mariage_letter_gradient_stop_2,
+.title__wedding .-mariage #mariage_letter_gradient_2 .mariage_letter_gradient_stop_2,
+.title__wedding .-mariage #mariage_letter_gradient_3 .mariage_letter_gradient_stop_2,
+.title__wedding .-mariage #mariage_letter_gradient_4 .mariage_letter_gradient_stop_2,
+.title__wedding .-mariage #mariage_letter_gradient_5 .mariage_letter_gradient_stop_2,
+.title__wedding .-mariage #mariage_letter_gradient_6 .mariage_letter_gradient_stop_2,
+.title__wedding .-mariage #mariage_letter_gradient_7 .mariage_letter_gradient_stop_2 {
   stop-color: #F9E927;
 }
-.main-invitation .title__wedding .-mariage #mariage_letter_gradient_1 .mariage_letter_gradient_stop_3,
-.main-invitation .title__wedding .-mariage #mariage_letter_gradient_2 .mariage_letter_gradient_stop_3,
-.main-invitation .title__wedding .-mariage #mariage_letter_gradient_3 .mariage_letter_gradient_stop_3,
-.main-invitation .title__wedding .-mariage #mariage_letter_gradient_4 .mariage_letter_gradient_stop_3,
-.main-invitation .title__wedding .-mariage #mariage_letter_gradient_5 .mariage_letter_gradient_stop_3,
-.main-invitation .title__wedding .-mariage #mariage_letter_gradient_6 .mariage_letter_gradient_stop_3,
-.main-invitation .title__wedding .-mariage #mariage_letter_gradient_7 .mariage_letter_gradient_stop_3 {
+.title__wedding .-mariage #mariage_letter_gradient_1 .mariage_letter_gradient_stop_3,
+.title__wedding .-mariage #mariage_letter_gradient_2 .mariage_letter_gradient_stop_3,
+.title__wedding .-mariage #mariage_letter_gradient_3 .mariage_letter_gradient_stop_3,
+.title__wedding .-mariage #mariage_letter_gradient_4 .mariage_letter_gradient_stop_3,
+.title__wedding .-mariage #mariage_letter_gradient_5 .mariage_letter_gradient_stop_3,
+.title__wedding .-mariage #mariage_letter_gradient_6 .mariage_letter_gradient_stop_3,
+.title__wedding .-mariage #mariage_letter_gradient_7 .mariage_letter_gradient_stop_3 {
   stop-color: #f9d924fb;
 }
-.main-invitation .title__wedding .title__text {
+.title__wedding .title__text {
   background: none;
 }
 @media (min-width: 980px) {
-  .main-invitation .title__names-svg .wedding_name_column {
+  .title__names-svg .wedding_name_column {
     display: none;
   }
-  .main-invitation .title__names-svg .wedding_name_line {
+  .title__names-svg .wedding_name_line {
     display: block;
   }
 }
-.main-invitation .title__names-svg .wedding_name_charlotte path {
+.title__names-svg .wedding_name_charlotte path {
   fill: #f9d924fb;
 }
-.main-invitation .title__names-svg .wedding_name_ampersand path {
+.title__names-svg .wedding_name_ampersand path {
   fill: #383833;
 }
-.main-invitation .title__names-svg .wedding_name_felix path {
+.title__names-svg .wedding_name_felix path {
   fill: #9D1D06;
+}
+.title__names-svg .wedding_name_decoration .wedding_name_ring-charlotte {
+  fill: #f9d924fb;
+}
+.title__names-svg .wedding_name_decoration .wedding_name_ring-felix {
+  fill: #9D1D06;
+}
+.title__names-svg .wedding_name_decoration_curve1 {
+  animation: fillCurve1 60s ease-in-out infinite;
+}
+.title__names-svg .wedding_name_decoration_curve2 {
+  animation: fillCurve2 60s ease-in-out infinite;
+}
+
+.main-invitation.-fr .title .title__names-svg .wedding_name_decoration .wedding_name_heart {
+  animation: fillCurve3Charlotte 60s ease-in-out infinite;
+}
+.main-invitation.-fr .title .title__names-svg .wedding_name_decoration_curve3 {
+  animation: fillCurve3Charlotte 60s ease-in-out infinite;
+}
+.main-invitation.-nl .title .title__names-svg .wedding_name_decoration .wedding_name_heart {
+  animation: fillCurve3Felix 15s ease-in-out infinite;
+}
+.main-invitation.-nl .title .title__names-svg .wedding_name_decoration_curve3 {
+  animation: fillCurve3Felix 15s ease-in-out infinite;
 }
 
 /*# sourceMappingURL=style.css.map */

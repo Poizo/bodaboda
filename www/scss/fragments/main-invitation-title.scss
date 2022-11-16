@@ -1,0 +1,231 @@
+
+@include keyframes(fillCurve1) {
+    0% {
+        fill: $grey01;
+    }
+    50% {
+        fill: $grey05;
+    }
+    100% {
+        fill: $grey01;
+    }
+}
+
+@include keyframes(fillCurve2) {
+    0% {
+        fill: $grey05;
+    }
+    50% {
+        fill: $grey01;
+    }
+    100% {
+        fill: $grey05;
+    }
+}
+
+@include keyframes(fillCurve3Felix) {
+    0% {
+        fill: rgba($red,.5);
+    }
+    50% {
+        fill: $red1;
+    }
+    100% {
+        fill: rgba($red,.5);
+    }
+}
+
+@include keyframes(fillCurve3Charlotte) {
+    0% {
+        fill: rgba($yellow, .5);
+    }
+    50% {
+        fill: $yellow1;
+    }
+    100% {
+        fill: rgba($yellow, .5);
+    }
+}
+
+.title {
+    max-height: 50vh;
+
+    &__text {
+        @extend .block;
+        @extend .c-grey04;
+        @extend .text-center;
+        @extend .f-medium;
+    }
+
+    &__wedding {
+        @extend .flex;
+        @extend .flex-center;
+        @extend .flex-bottom;
+        
+        .-bruiloft {
+            width: 40%;
+            @extend .m-none;
+            
+            #bruiloft_letter_gradient_1,
+            #bruiloft_letter_gradient_2,
+            #bruiloft_letter_gradient_3,
+            #bruiloft_letter_gradient_4,
+            #bruiloft_letter_gradient_5,
+            #bruiloft_letter_gradient_6,
+            #bruiloft_letter_gradient_7,
+            #bruiloft_letter_gradient_8
+            {
+                .bruiloft_gradient_stop_1 {
+                    stop-color: $red1;
+                }
+
+                .bruiloft_gradient_stop_2 {
+                    stop-color: $red;
+                }
+
+                .bruiloft_gradient_stop_3 {
+                    stop-color: $red1;
+                }
+
+            }
+            
+            .bruiloft_letter_gradient_0{ fill:url(#bruiloft_letter_gradient_1); }
+            .bruiloft_letter_gradient_1{ fill:url(#bruiloft_letter_gradient_2); }
+            .bruiloft_letter_gradient_2{ fill:url(#bruiloft_letter_gradient_3); }
+            .bruiloft_letter_gradient_3{ fill:url(#bruiloft_letter_gradient_4); }
+            .bruiloft_letter_gradient_4{ fill:url(#bruiloft_letter_gradient_5); }
+            .bruiloft_letter_gradient_5{ fill:url(#bruiloft_letter_gradient_6); }
+            .bruiloft_letter_gradient_6{ fill:url(#bruiloft_letter_gradient_7); }
+            .bruiloft_letter_gradient_7{ fill:url(#bruiloft_letter_gradient_8); }
+        }
+
+        .-mariage {
+            width: 40%;
+            @extend .m-none;
+            
+            .mariage_letter_gradient_0{fill:url(#mariage_letter_gradient_1);}
+            .mariage_letter_gradient_1{fill:url(#mariage_letter_gradient_2);}
+            .mariage_letter_gradient_2{fill:url(#mariage_letter_gradient_3);}
+            .mariage_letter_gradient_3{fill:url(#mariage_letter_gradient_4);}
+            .mariage_letter_gradient_4{fill:url(#mariage_letter_gradient_5);}
+            .mariage_letter_gradient_5{fill:url(#mariage_letter_gradient_6);}
+            .mariage_letter_gradient_6{fill:url(#mariage_letter_gradient_7);}
+
+            #mariage_letter_gradient_1,
+            #mariage_letter_gradient_2,
+            #mariage_letter_gradient_3,
+            #mariage_letter_gradient_4,
+            #mariage_letter_gradient_5,
+            #mariage_letter_gradient_6,
+            #mariage_letter_gradient_7
+            {
+                .mariage_letter_gradient_stop_1 {
+                    stop-color: $yellow1;
+                }
+                .mariage_letter_gradient_stop_2 {
+                    stop-color: $yellow;
+                }
+                .mariage_letter_gradient_stop_3 {
+                    stop-color: $yellow1;
+                }
+            }
+        }
+
+        .title__text {
+            background: none;
+            @extend .lowercase;
+            @extend .f-m;
+            @extend .f-medium;
+            @extend .c-grey04;
+        }
+    }
+
+    &__names-svg {
+        .wedding_name_line {
+            @extend .hidden;
+        }
+        @media (min-width: 980px)  {
+            .wedding_name_column {
+                display: none;
+            }
+            .wedding_name_line {
+                display: block;
+            }
+        }
+
+        .wedding_name_charlotte {
+            path {
+                fill: $yellow1;
+            }
+        }
+        .wedding_name_ampersand {
+            path {
+                fill: $grey05;
+            }
+        }
+        .wedding_name_felix {
+            path {
+                fill: $red1;
+            }
+        }
+        .wedding_name_decoration {
+            .wedding_name_ring {
+                &-charlotte {
+                    fill: $yellow1;
+                }
+                &-felix {
+                    fill: $red1;
+                }
+            }
+
+
+            &_curve {
+                &1 {
+                    animation: fillCurve1 60s ease-in-out infinite;
+                }
+                &2 {
+                    animation: fillCurve2 60s ease-in-out infinite;
+                }
+            }
+        }
+    }
+}
+
+.main-invitation {
+    &.-fr {
+        .title {
+            .title__names-svg {
+                .wedding_name_decoration {
+                    .wedding_name_heart {
+                        animation: fillCurve3Charlotte 60s ease-in-out infinite;
+                    }
+
+                    &_curve {
+                        &3 {
+                            animation: fillCurve3Charlotte 60s ease-in-out infinite;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &.-nl {
+        .title {
+            .title__names-svg {
+                .wedding_name_decoration {
+                    .wedding_name_heart {
+                        animation: fillCurve3Felix 15s ease-in-out infinite;
+                    }
+
+                    &_curve {
+                        &3 {
+                            animation: fillCurve3Felix 15s ease-in-out infinite;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
