@@ -25,7 +25,7 @@
         }
         &:hover,&:focus {
             span {
-                @extend .c-yellow;
+                @extend .c-yellow1;
             }
         }
     }
@@ -92,90 +92,152 @@
         height: 100vh;
 
         .aside-menu__content {
-            @extend .flex;
-            @extend .flex-center;
+            @extend .block;
         }
     }
 
     &__content {
         @extend .hidden;
 
-        .language-button {
-                @extend .relative;
-                @extend .py-s;
-                @extend .px-m;
-                @extend .br-m;
-                @extend .c-pointer;
-                @extend .o-hidden;
-                @extend .bw-none;
-                -webkit-appearance: none;
-                -moz-appearance: none;
-                appearance: none;
-                box-shadow: none;
-                background: none;
-            
-                &:focus
-                {
-                    outline: none;
+        &-language-buttons {
+            @extend .flex;
+            @extend .pb-xl;
+
+
+            .language-button {
+                    @extend .relative;
+                    @extend .py-s;
+                    @extend .px-m;
+                    @extend .br-m;
+                    @extend .c-pointer;
+                    @extend .o-hidden;
+                    @extend .bw-none;
+                    -webkit-appearance: none;
+                    -moz-appearance: none;
+                    appearance: none;
                     box-shadow: none;
-                }
-        
-                &:after
-                {
-                    content: '';
-                    @extend .absolute;
-                    top: -1000%;
-                    left: -1000%;
-                    z-index: 1;
-                    @extend .h-100;
-                    width: 0;
-                    transition: width .5s ease-in;
-                }
-        
-                &:hover,&:focus,&.-active {
+                    background: none;
+                
+                    &:focus
+                    {
+                        outline: none;
+                        box-shadow: none;
+                    }
+            
                     &:after
                     {
-                        top: 0;
-                        left: -25%;
-                        width: 150%;
-                        transform: skewX(-50deg);
+                        content: '';
+                        @extend .absolute;
+                        top: -1000%;
+                        left: -1000%;
+                        z-index: 1;
+                        @extend .h-100;
+                        width: 0;
+                        transition: width .5s ease-in;
                     }
-        
+            
+                    &:hover,&:focus,&.-active {
+                        &:after
+                        {
+                            top: 0;
+                            left: -25%;
+                            width: 150%;
+                            transform: skewX(-50deg);
+                        }
+            
+                        >span
+                        {
+                            @extend .c-grey00;
+                        }
+                    }
+            
                     >span
                     {
-                        @extend .c-grey00;
+                        @extend .relative;
+                        z-index: 10;
+                        @extend .block;
+                        @extend .w-100;
+                        @extend .text-center;
+                        @extend .uppercase;
+                        @extend .c-grey03;
+                        @extend .f-l;
+                        @extend .f-bold;
+                        transition: color .5s ease-in-out;
                     }
-                }
-        
-                >span
-                {
-                    @extend .relative;
-                    z-index: 10;
-                    @extend .block;
-                    @extend .w-100;
-                    @extend .text-center;
-                    @extend .uppercase;
-                    @extend .c-grey03;
-                    @extend .f-l;
-                    @extend .f-bold;
-                    transition: color .5s ease-in-out;
-                }
-        
-        
-                &.-fr {
-                    background-color: rgba($yellow, .5);
-                    &:after {
-                        background-color: rgba($yellow1, .75);
+            
+            
+                    &.-fr {
+                        background-color: rgba($yellow, .5);
+                        &:after {
+                            background-color: rgba($yellow1, .75);
+                        }
                     }
-                }
+                    
+                    &.-nl {
+                        background-color: rgba($red, .5);
+                        &:after {
+                            background-color: rgba($red1, .75);
+                        }
+            
+                    }
+            }
+        }
+
+        &-links {
+            @extend .flex;
+            @extend .flex-column;
+
+
+            a {
+                @extend .py-xs;
+                @extend .pl-m;
+                @extend .mb-m;
+                @extend .br-s;
+                @extend .bg-transparent;
+                @extend .bs-solid;
+                @extend .bw-s;
                 
-                &.-nl {
-                    background-color: rgba($red, .5);
-                    &:after {
-                        background-color: rgba($red1, .75);
-                    }
-        
+                transition: background-color .75s ease-in-out, border-color .75s ease-in-out;
+                
+                span {
+                    transition: color .5s ease-in-out;
+                    @extend .f-regular;
+                    @extend .c-grey04;
                 }
             }
         }
+    }
+
+    &.-fr {
+        .aside-menu__content-links {
+            a {
+                border-color: $yellow;
+                &:hover {
+                    border-color: $transparent;
+                    @extend .bg-yellow1;
+                    span {
+                        @extend .c-grey00;
+                        
+                    }
+                }
+            }
+        }
+    }
+
+    &.-nl {
+        .aside-menu__content-links {
+            a {
+                border-color: $red;
+                &:hover {
+                    border-color: $transparent;
+                    @extend .bg-red1;
+                    span {
+                        @extend .c-grey00;
+                        
+                    }
+                }
+            }
+        }
+    }
+    
 }

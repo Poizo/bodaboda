@@ -88,6 +88,22 @@
         }
 
     }
+
+    &-body {
+        @extend .py-s;
+        p {
+            @extend .m-none;
+            @extend .pt-m;
+            @extend .f-regular;
+            @extend .f-m;
+            @extend .c-grey04;
+            @extend .text-center;
+            
+            @import './when';
+
+
+        }
+    }
 }
 
 .main-invitation {
@@ -103,6 +119,22 @@
                 background-color: rgba($yellow1, .5);
             }
         }
+
+        .when-day {
+            @extend .bc-yellow1;
+            &:before, &:after {
+                @extend .bg-yellow1;
+            }
+        }
+
+        .when-month {
+            @extend .uppercase;
+            @extend .c-yellow1;
+        }
+
+        .when-hour-dots {
+            @extend .c-yellow1;
+        }
     }
 
     &.-nl {
@@ -116,6 +148,20 @@
             .dot:after {
                 background-color: rgba($red1, .5);
             }
+        }
+        
+        .when-day {
+            @extend .bc-red1;
+            &:before, &:after {
+                @extend .bg-red1;
+            }
+        }
+        .when-month {
+            @extend .c-red1;
+        }
+
+        .when-hour-dots {
+            @extend .c-red1;
         }
     }
 

@@ -11,7 +11,7 @@ window.onload = () => {
 
     if (slug === '/' || (slug !== '/boda' && slug !== '/fiesta')) {
         slug = '/fiesta';
-        //  Uncomment to put on prod
+        //TODO: Uncomment to put on prod
         // window.location.pathname = slug;
     }
     isInvitedAllDay = slug === '/boda';
@@ -36,6 +36,8 @@ window.onload = () => {
         const otherLang = lang === 'fr' ? 'nl' : 'fr';
         mainInvitation.classList.add(`-${lang}`);
         mainInvitation.classList.remove(`-${otherLang}`);
+        asideMenu.classList.add(`-${lang}`);
+        asideMenu.classList.remove(`-${otherLang}`);
         menuOpener.classList.add(`-${lang}`);
         menuOpener.classList.remove(`-${otherLang}`);
         document.querySelector(`[data-lang="${lang}"]`).classList.add('-active');
@@ -60,11 +62,12 @@ window.onload = () => {
 
 
     
-    ///////////////////////////
+    /////////////////////////// Safari Alert
 
-    checkSafariBrowser();
+    //TODO: Uncomment to put on prod
+    // checkSafariBrowser();
 
-    ///////////////////////////
+    /////////////////////////// Listeners
     document.querySelector('.choose-language-button.-fr').addEventListener('click', () => {
         chooseLanguage('fr');
         asideMenu.classList.remove('out-of-flow');
@@ -100,6 +103,10 @@ window.onload = () => {
         });
     });
 
-    //////////////////////
+    ////////////////////// Check Is Invite All Day
+    if (!isInvitedAllDay) {
+        //TODO: Uncomment to put on prod
+        // document.querySelectorAll('[data-isAllDay]').forEach(el => el.remove());
+    }
 
 }
