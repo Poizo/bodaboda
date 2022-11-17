@@ -1,35 +1,44 @@
-.when-day, .when-month {
-    @extend .mr-xxs;
+p {
+    @extend .m-none;
+    @extend .pt-m;
+    @extend .f-regular;
+    @extend .f-m;
+    @extend .c-grey04;
     @extend .text-center;
-    @extend .f-medium;
-    @extend .f-l;
-    @extend .c-grey05;
-}
-.when-day {
-    @extend .relative;
-    @extend .mx-xs;
-    @extend .p-xs;
-    @extend .bw-m;
-    @extend .br-m;
-    @extend .bs-solid;
-
-    &:before, &:after {
-        content: '';
-        width: 4px;
-        height: 8px;
+    
+    .when-day, .when-month {
+        @extend .mr-xxs;
+        @extend .text-center;
+        @extend .f-medium;
+        @extend .f-l;
+        @extend .c-grey05;
+    }
+    .when-day {
+        @extend .relative;
+        @extend .mx-xs;
+        @extend .p-xs;
+        @extend .bw-m;
         @extend .br-m;
-        @extend .absolute;
-        top: -6px;
+        @extend .bs-solid;
+    
+        &:before, &:after {
+            content: '';
+            width: 4px;
+            height: 8px;
+            @extend .br-m;
+            @extend .absolute;
+            top: -6px;
+        }
+        &:before {
+            left: 6px;
+        }
+        &:after {
+            right: 6px;
+        }
     }
-    &:before {
-        left: 6px;
-    }
-    &:after {
-        right: 6px;
-    }
-}
-
-.when-hour {
-    @extend .f-medium;
-    @extend .c-grey05;
+    
+    .when-hour {
+        @extend .f-medium;
+        @extend .c-grey05;
+    }    
 }

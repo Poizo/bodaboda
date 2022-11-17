@@ -2045,7 +2045,7 @@ html {
   background-color: #6b6b62;
 }
 
-.c-grey04, .part__invitation-body p, .title__wedding .title__text, .title__text, .aside-menu__content-links a span {
+.c-grey04, .part__invitation-body#anchor__when p, .title__wedding .title__text, .title__text, .aside-menu__content-links a span {
   color: #6b6b62;
 }
 
@@ -2069,7 +2069,7 @@ html {
   background-color: #383833;
 }
 
-.c-grey05, .part__invitation-body p .when-hour, .part__invitation-body p .when-day, .part__invitation-body p .when-month, .part__invitation-title-text {
+.c-grey05, .part__invitation-body#anchor__when p .when-hour, .part__invitation-body#anchor__when p .when-day, .part__invitation-body#anchor__when p .when-month, .part__invitation-title-text {
   color: #383833;
 }
 
@@ -2089,7 +2089,7 @@ html {
   border-width: 1.75px;
 }
 
-.bw-m, .part__invitation-body p .when-day {
+.bw-m, .part__invitation-body#anchor__when p .when-day {
   border-width: 2px;
 }
 
@@ -2125,7 +2125,7 @@ html {
   border-radius: 3.5px;
 }
 
-.br-m, .part__invitation-body p .when-day:before, .part__invitation-body p .when-day:after, .part__invitation-body p .when-day, .aside-menu__content-language-buttons .language-button, .language-selection-page .FC .language_container .choose-language-button {
+.br-m, .part__invitation-body#anchor__when p .when-day:before, .part__invitation-body#anchor__when p .when-day:after, .part__invitation-body#anchor__when p .when-day, .aside-menu__content-language-buttons .language-button, .language-selection-page .FC .language_container .choose-language-button {
   border-radius: 4px;
 }
 
@@ -2301,7 +2301,7 @@ html {
   border-style: double;
 }
 
-.bs-solid, .part__invitation-body p .when-day, .aside-menu__content-links a {
+.bs-solid, .part__invitation-body#anchor__when p .when-day, .aside-menu__content-links a {
   border-style: solid;
 }
 
@@ -2457,7 +2457,7 @@ html {
   margin-top: 4px;
 }
 
-.mr-xxs, .part__invitation-body p .when-day, .part__invitation-body p .when-month {
+.mr-xxs, .part__invitation-body#anchor__when p .when-day, .part__invitation-body#anchor__when p .when-month {
   margin-right: 4px;
 }
 
@@ -2633,7 +2633,7 @@ html {
   margin: 8px;
 }
 
-.mx-xs, .part__invitation-body p .when-day {
+.mx-xs, .part__invitation-body#anchor__when p .when-day {
   margin-left: 8px;
   margin-right: 8px;
 }
@@ -2659,7 +2659,7 @@ html {
   margin-left: 8px;
 }
 
-.p-xs, .part__invitation-body p .when-day {
+.p-xs, .part__invitation-body#anchor__when p .when-day {
   padding: 8px;
 }
 
@@ -3053,7 +3053,7 @@ html {
   padding-bottom: 16px;
 }
 
-.pt-m, .part__invitation-body p, .language-selection-page .FC .language_container {
+.pt-m, .part__invitation-body#anchor__when p, .language-selection-page .FC .language_container {
   padding-top: 16px;
 }
 
@@ -3217,7 +3217,7 @@ html {
   margin-top: 24px;
 }
 
-.mr-l, .part__invitation-body .where-city-hall, .part__invitation-body .party-svg {
+.mr-l, .part__invitation-body .where-city-hall, .part__invitation-body .party-svg, .part__invitation-body .sleep-house, .part__invitation-body .sleep-tent {
   margin-right: 24px;
 }
 
@@ -3669,7 +3669,7 @@ html {
   padding-left: 0;
 }
 
-.m-none, .part__invitation-body p, .title__wedding .-mariage, .title__wedding .-bruiloft, body {
+.m-none, .part__invitation-body#anchor__when p, .title__wedding .-mariage, .title__wedding .-bruiloft, body {
   margin: 0;
 }
 
@@ -3683,7 +3683,7 @@ html {
   margin-bottom: 0;
 }
 
-.mt-none, .part__invitation-body .where-city-hall, .part__invitation-body .party-svg {
+.mt-none, .part__invitation-body .where-city-hall, .part__invitation-body .party-svg, .part__invitation-body .sleep-house, .part__invitation-body .sleep-tent {
   margin-top: 0;
 }
 
@@ -3695,11 +3695,11 @@ html {
   margin-right: auto;
 }
 
-.mb-none, .part__invitation-body .where-city-hall, .part__invitation-body .party-svg {
+.mb-none, .part__invitation-body .where-city-hall, .part__invitation-body .party-svg, .part__invitation-body .sleep-house, .part__invitation-body .sleep-tent {
   margin-bottom: 0;
 }
 
-.ml-none, .part__invitation-body .where-city-hall, .part__invitation-body .party-svg {
+.ml-none, .part__invitation-body .where-city-hall, .part__invitation-body .party-svg, .part__invitation-body .sleep-house, .part__invitation-body .sleep-tent {
   margin-left: 0;
 }
 
@@ -3749,7 +3749,7 @@ html {
   }
 }
 
-.relative, .part__invitation-body p .when-day, .part__invitation-title-text, .part__invitation-title-separator .dot, .aside-menu__content-language-buttons .language-button > span, .aside-menu__content-language-buttons .language-button, .language-selection-page .FC .language_container .choose-language-button > span, .language-selection-page .FC .language_container .choose-language-button, .column-0,
+.relative, .part__invitation-body#anchor__when p .when-day, .part__invitation-title-text, .part__invitation-title-separator .dot, .aside-menu__content-language-buttons .language-button > span, .aside-menu__content-language-buttons .language-button, .language-selection-page .FC .language_container .choose-language-button > span, .language-selection-page .FC .language_container .choose-language-button, .column-0,
 .column-xxs-0, .column-1,
 .column-xxs-1, .column-2,
 .column-xxs-2, .column-3,
@@ -3844,7 +3844,7 @@ html {
   position: relative;
 }
 
-.absolute, .part__invitation-body p .when-day:before, .part__invitation-body p .when-day:after, .part__invitation-title-text:after, .part__invitation-title-separator .dot:after, .aside-menu__content-language-buttons .language-button:after, .aside-menu__opener > span, .language-selection-page .FC .language_container .choose-language-button:after, .language-selection-page .FC, .language-selection-page .stain, .absolute-center {
+.absolute, .part__invitation-body#anchor__when p .when-day:before, .part__invitation-body#anchor__when p .when-day:after, .part__invitation-title-text:after, .part__invitation-title-separator .dot:after, .aside-menu__content-language-buttons .language-button:after, .aside-menu__opener > span, .language-selection-page .FC .language_container .choose-language-button:after, .language-selection-page .FC, .language-selection-page .stain, .absolute-center {
   position: absolute;
 }
 
@@ -4046,7 +4046,7 @@ html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-.f-regular, .part__invitation-body p, .aside-menu__content-links a span {
+.f-regular, .part__invitation-body#anchor__when p, .aside-menu__content-links a span {
   font-family: "Comfortaa-Regular";
 }
 
@@ -4062,7 +4062,7 @@ html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-.f-medium, .part__invitation-body p .when-hour, .part__invitation-body p .when-day, .part__invitation-body p .when-month, .part__invitation-title-text, .title__wedding .title__text, .title__text, h4, h5, h6 {
+.f-medium, .part__invitation-body#anchor__when p .when-hour, .part__invitation-body#anchor__when p .when-day, .part__invitation-body#anchor__when p .when-month, .part__invitation-title-text, .title__wedding .title__text, .title__text, h4, h5, h6 {
   font-family: "Comfortaa-Medium";
 }
 
@@ -4110,11 +4110,11 @@ html {
   font-size: 0.875rem;
 }
 
-.f-m, .part__invitation-body p, .title__wedding .title__text {
+.f-m, .part__invitation-body#anchor__when p, .title__wedding .title__text {
   font-size: 1rem;
 }
 
-.f-l, .part__invitation-body p .when-day, .part__invitation-body p .when-month, .aside-menu__content-language-buttons .language-button > span, .language-selection-page .FC .language_container .choose-language-button > span {
+.f-l, .part__invitation-body#anchor__when p .when-day, .part__invitation-body#anchor__when p .when-month, .aside-menu__content-language-buttons .language-button > span, .language-selection-page .FC .language_container .choose-language-button > span {
   font-size: 1.125rem;
 }
 
@@ -4130,7 +4130,7 @@ html {
   text-align: left;
 }
 
-.text-center, .part__invitation-body p .when-day, .part__invitation-body p .when-month, .part__invitation-body p, .part__invitation-title-text, .title__text, .aside-menu__content-language-buttons .language-button > span, .language-selection-page .FC .language_container .choose-language-button > span {
+.text-center, .part__invitation-body#anchor__when p .when-day, .part__invitation-body#anchor__when p .when-month, .part__invitation-body#anchor__when p, .part__invitation-title-text, .title__text, .aside-menu__content-language-buttons .language-button > span, .language-selection-page .FC .language_container .choose-language-button > span {
   text-align: center;
 }
 
@@ -5414,19 +5414,19 @@ svg {
   left: 0;
   bottom: 4px;
 }
-.part__invitation-body p .when-day:before, .part__invitation-body p .when-day:after {
+.part__invitation-body#anchor__when p .when-day:before, .part__invitation-body#anchor__when p .when-day:after {
   content: "";
   width: 4px;
   height: 8px;
   top: -6px;
 }
-.part__invitation-body p .when-day:before {
+.part__invitation-body#anchor__when p .when-day:before {
   left: 6px;
 }
-.part__invitation-body p .when-day:after {
+.part__invitation-body#anchor__when p .when-day:after {
   right: 6px;
 }
-.part__invitation-body .where-city-hall, .part__invitation-body .party-svg {
+.part__invitation-body .where-city-hall, .part__invitation-body .party-svg, .part__invitation-body .sleep-house, .part__invitation-body .sleep-tent {
   max-height: 10vh;
 }
 
@@ -5445,6 +5445,18 @@ svg {
 .main-invitation.-fr .party-svg-2 {
   fill: rgba(252, 214, 1, 0.984);
 }
+.main-invitation.-fr .sleep-house-1 {
+  fill: #E30613;
+}
+.main-invitation.-fr .sleep-house-2 {
+  fill: rgba(252, 214, 1, 0.984);
+}
+.main-invitation.-fr .sleep-tent-1 {
+  fill: #E30613;
+}
+.main-invitation.-fr .sleep-tent-2 {
+  fill: rgba(252, 214, 1, 0.984);
+}
 .main-invitation.-nl .part__invitation-title-text:after {
   background-color: #E30613;
 }
@@ -5458,6 +5470,18 @@ svg {
   fill: rgba(249, 233, 39, 0.75);
 }
 .main-invitation.-nl .party-svg-2 {
+  fill: #E30613;
+}
+.main-invitation.-nl .sleep-house-1 {
+  fill: rgba(252, 214, 1, 0.984);
+}
+.main-invitation.-nl .sleep-house-2 {
+  fill: #E30613;
+}
+.main-invitation.-nl .sleep-tent-1 {
+  fill: rgba(252, 214, 1, 0.984);
+}
+.main-invitation.-nl .sleep-tent-2 {
   fill: #E30613;
 }
 

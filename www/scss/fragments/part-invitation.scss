@@ -91,17 +91,19 @@
 
     &-body {
         @extend .py-s;
-        p {
-            @extend .m-none;
-            @extend .pt-m;
-            @extend .f-regular;
-            @extend .f-m;
-            @extend .c-grey04;
-            @extend .text-center;
-            
+
+        &#anchor__when {
             @import './when';
         }
-        @import './where';
+        
+        .where-city-hall, .party-svg, .sleep-house, .sleep-tent {
+            @extend .ml-none;
+            @extend .mt-none;
+            @extend .mb-none;
+            @extend .mr-l;
+            max-height: 10vh;
+        }
+        
     }
 }
 
@@ -143,6 +145,11 @@
         .party-svg-1{fill: rgba($red, .75);}
         .party-svg-2{fill: $yellow1;}
 
+        .sleep-house-1{fill: $red;}
+        .sleep-house-2{fill: $yellow1;}
+
+        .sleep-tent-1{fill: $red;}
+        .sleep-tent-2{fill: $yellow1;}
     }
 
     &.-nl {
@@ -179,7 +186,10 @@
         }
         .party-svg-1{fill: rgba($yellow, .75);}
         .party-svg-2{fill: $red;}
-        
+        .sleep-house-1{fill: $yellow1;}
+        .sleep-house-2{fill: $red;}
+        .sleep-tent-1{fill: $yellow1;}
+        .sleep-tent-2{fill: $red;}
     }
 
 }

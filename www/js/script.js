@@ -106,7 +106,7 @@ window.onload = () => {
     ////////////////////// Check Is Invite All Day
     if (!isInvitedAllDay) {
         //TODO: Uncomment to put on prod
-        document.querySelectorAll('[data-isAllDay]').forEach(el => el.remove());
+        // document.querySelectorAll('[data-isAllDay]').forEach(el => el.remove());
     }
 
 }
