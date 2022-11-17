@@ -2149,7 +2149,7 @@ html {
   border-radius: 0;
 }
 
-.br-circle, .part__invitation-title-separator .dot:after, .part__invitation-title-separator .dot {
+.br-circle, .part__invitation-title-separator .dot:after, .part__invitation-title-separator .dot, .aside-menu__opener {
   border-radius: 50%;
 }
 
@@ -3048,7 +3048,7 @@ html {
   padding-right: 16px;
 }
 
-.py-m, .main-invitation {
+.py-m, .main-invitation-content {
   padding-top: 16px;
   padding-bottom: 16px;
 }
@@ -3217,7 +3217,7 @@ html {
   margin-top: 24px;
 }
 
-.mr-l {
+.mr-l, .part__invitation-body .where-city-hall, .part__invitation-body .party-svg {
   margin-right: 24px;
 }
 
@@ -3233,7 +3233,7 @@ html {
   padding: 24px;
 }
 
-.px-l, .main-invitation {
+.px-l, .main-invitation-content {
   padding-left: 24px;
   padding-right: 24px;
 }
@@ -3683,7 +3683,7 @@ html {
   margin-bottom: 0;
 }
 
-.mt-none {
+.mt-none, .part__invitation-body .where-city-hall, .part__invitation-body .party-svg {
   margin-top: 0;
 }
 
@@ -3695,11 +3695,11 @@ html {
   margin-right: auto;
 }
 
-.mb-none {
+.mb-none, .part__invitation-body .where-city-hall, .part__invitation-body .party-svg {
   margin-bottom: 0;
 }
 
-.ml-none {
+.ml-none, .part__invitation-body .where-city-hall, .part__invitation-body .party-svg {
   margin-left: 0;
 }
 
@@ -3844,7 +3844,7 @@ html {
   position: relative;
 }
 
-.absolute, .part__invitation-body p .when-day:before, .part__invitation-body p .when-day:after, .part__invitation-title-text:after, .part__invitation-title-separator .dot:after, .aside-menu__content-language-buttons .language-button:after, .language-selection-page .FC .language_container .choose-language-button:after, .language-selection-page .FC, .language-selection-page .stain, .absolute-center {
+.absolute, .part__invitation-body p .when-day:before, .part__invitation-body p .when-day:after, .part__invitation-title-text:after, .part__invitation-title-separator .dot:after, .aside-menu__content-language-buttons .language-button:after, .aside-menu__opener > span, .language-selection-page .FC .language_container .choose-language-button:after, .language-selection-page .FC, .language-selection-page .stain, .absolute-center {
   position: absolute;
 }
 
@@ -4749,6 +4749,8 @@ svg {
 
 .aside-menu__opener {
   z-index: 100;
+  width: 32px;
+  height: 32px;
   top: 24px;
   left: 8px;
   -webkit-appearance: none;
@@ -4758,10 +4760,18 @@ svg {
   background: none;
 }
 .aside-menu__opener > span {
+  top: 6px;
+  left: 6px;
   transition: color 0.5s ease-in-out;
+}
+.aside-menu__opener.-fr {
+  background-color: rgba(255, 255, 255, 0.75);
 }
 .aside-menu__opener.-fr span {
   color: rgba(249, 233, 39, 0.65);
+}
+.aside-menu__opener.-nl {
+  background-color: rgba(255, 255, 255, 0.5);
 }
 .aside-menu__opener.-nl span {
   color: rgba(227, 6, 19, 0.5);
@@ -4873,6 +4883,10 @@ svg {
 }
 .main-invitation.-nl {
   background-color: rgba(227, 6, 19, 0.1);
+}
+.main-invitation-content {
+  margin: auto;
+  max-width: 1200px;
 }
 
 @-webkit-keyframes fillCurve1 {
@@ -5412,17 +5426,39 @@ svg {
 .part__invitation-body p .when-day:after {
   right: 6px;
 }
+.part__invitation-body .where-city-hall, .part__invitation-body .party-svg {
+  max-height: 10vh;
+}
+
 .main-invitation.-fr .part__invitation-title-text:after {
   background-color: #F9E927;
 }
 .main-invitation.-fr .part__invitation-title-separator .dot:after {
   background-color: rgba(252, 214, 1, 0.5);
 }
+.main-invitation.-fr .where-city-hall path {
+  fill: rgba(252, 214, 1, 0.984);
+}
+.main-invitation.-fr .party-svg-1 {
+  fill: rgba(227, 6, 19, 0.75);
+}
+.main-invitation.-fr .party-svg-2 {
+  fill: rgba(252, 214, 1, 0.984);
+}
 .main-invitation.-nl .part__invitation-title-text:after {
   background-color: #E30613;
 }
 .main-invitation.-nl .part__invitation-title-separator .dot:after {
   background-color: rgba(157, 29, 6, 0.5);
+}
+.main-invitation.-nl .where-city-hall path {
+  fill: #9D1D06;
+}
+.main-invitation.-nl .party-svg-1 {
+  fill: rgba(249, 233, 39, 0.75);
+}
+.main-invitation.-nl .party-svg-2 {
+  fill: #E30613;
 }
 
 /*# sourceMappingURL=style.css.map */

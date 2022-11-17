@@ -100,9 +100,8 @@
             @extend .text-center;
             
             @import './when';
-
-
         }
+        @import './where';
     }
 }
 
@@ -135,6 +134,15 @@
         .when-hour-dots {
             @extend .c-yellow1;
         }
+
+        .where-city-hall {
+            path {
+                fill: $yellow1;
+            }
+        }
+        .party-svg-1{fill: rgba($red, .75);}
+        .party-svg-2{fill: $yellow1;}
+
     }
 
     &.-nl {
@@ -149,7 +157,7 @@
                 background-color: rgba($red1, .5);
             }
         }
-        
+
         .when-day {
             @extend .bc-red1;
             &:before, &:after {
@@ -163,6 +171,15 @@
         .when-hour-dots {
             @extend .c-red1;
         }
+
+        .where-city-hall {
+            path {
+                fill: $red1;
+            }
+        }
+        .party-svg-1{fill: rgba($yellow, .75);}
+        .party-svg-2{fill: $red;}
+        
     }
 
 }

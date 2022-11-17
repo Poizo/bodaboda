@@ -20,9 +20,13 @@
     opacity: 1;
     min-height: 100vh;
     transition: opacity 2.2s cubic-bezier(1,-0.76, 1, 1.58);
-
-    @extend .px-l;
-    @extend .py-m;
+    
+    &-content {
+        margin: auto;
+        max-width: 1200px;
+        @extend .px-l;
+        @extend .py-m;
+    }
 }
 
 @import "../fragments/main-invitation-title";

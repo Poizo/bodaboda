@@ -1,11 +1,17 @@
 .aside-menu__opener {
     @extend .fixed;
     z-index: 100;
+    width: compute-grid($grid-xl);
+    height: compute-grid($grid-xl);
+
     top: compute-grid($grid-l);
     left: compute-grid($grid-xs);
     @extend .c-pointer;
     @extend .o-hidden;
+    
     @extend .bw-none;
+    @extend .br-circle;
+
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
@@ -13,6 +19,9 @@
     background: none;
 
     >span {
+        @extend .absolute;
+        top: 6px;
+        left: 6px;
         @extend .f-xl;
         @extend .icon-menu_open_icon;
         transition: color .5s ease-in-out;
@@ -20,6 +29,7 @@
 
         
     &.-fr {
+        background-color: rgba($grey00, .75);
         span {
             color: rgba($yellow, .65);
         }
@@ -31,6 +41,7 @@
     }
 
     &.-nl {
+        background-color: rgba($grey00, .5);
         span {
             color: rgba($red, .5);
         }
