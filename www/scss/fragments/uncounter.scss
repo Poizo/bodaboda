@@ -1,0 +1,41 @@
+.uncounter {
+    @extend .flex;
+    @extend .flex-center;
+    @extend .pb-l;
+
+    &-days,&-hours,&-minutes,&-seconds {
+        @extend .flex;
+        @extend .flex-column;
+        @extend .flex-center;
+        @extend .p-xs;
+        @extend .br-m;
+        @extend .bw-m;
+        @extend .bs-solid;
+        
+        &:not(:last-child) {
+            @extend .mr-m;
+        }
+
+        span {
+            @extend .f-m;
+            @extend .f-medium;
+            @extend .text-center;
+            @extend .c-grey04;
+        }
+        div {
+            @extend .pt-xxs;
+            @extend .f-xl;
+            @extend .f-bold;
+            @extend .text-center;
+            @extend .c-grey05;
+
+        }
+
+        @media (max-width: 768px) {
+            span {
+                font-size: .75rem;
+            }
+        }
+    }
+
+}

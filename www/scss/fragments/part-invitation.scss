@@ -92,7 +92,7 @@
     &-body {
         @extend .py-s;
 
-        &#anchor__when {
+        &.-when {
             @import './when';
         }
         
@@ -102,6 +102,16 @@
             @extend .mb-none;
             @extend .mr-l;
             max-height: 10vh;
+        }
+        
+        .brunch-svg {
+            @extend .pb-s;
+            margin: auto;
+            max-height: 15vh;
+            .brunch-1{fill:$yellow1;}
+            .brunch-2{fill:$yellow;}
+            .brunch-3{fill:$red;}
+            .brunch-4{fill:$red1;}
         }
         
     }

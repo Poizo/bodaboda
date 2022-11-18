@@ -64,8 +64,7 @@ window.onload = () => {
     
     /////////////////////////// Safari Alert
 
-    //TODO: Uncomment to put on prod
-    // checkSafariBrowser();
+    checkSafariBrowser();
 
     /////////////////////////// Listeners
     document.querySelector('.choose-language-button.-fr').addEventListener('click', () => {
@@ -73,12 +72,14 @@ window.onload = () => {
         asideMenu.classList.remove('out-of-flow');
         menuOverlay.classList.remove('out-of-flow');
         menuOpener.classList.remove('out-of-flow');
+        makeCounter();
     });
     document.querySelector('.choose-language-button.-nl').addEventListener('click', () => {
         chooseLanguage('nl');
         asideMenu.classList.remove('out-of-flow');
         menuOverlay.classList.remove('out-of-flow');
         menuOpener.classList.remove('out-of-flow');
+        makeCounter();
     });
     
     menuOpener.addEventListener('click', () => {
@@ -103,10 +104,80 @@ window.onload = () => {
         });
     });
 
+    document.querySelectorAll('.aside-menu__content-links a').forEach(a => {
+        a.addEventListener('click', () => {
+            setTimeout(() => {
+                menuOverlay.dispatchEvent(new Event('click'));
+            }, 150);
+        })
+    });
+
     ////////////////////// Check Is Invite All Day
     if (!isInvitedAllDay) {
-        //TODO: Uncomment to put on prod
         // document.querySelectorAll('[data-isAllDay]').forEach(el => el.remove());
     }
 
+    function makeCounter() {
+        const weddingDate = new Date('June 17, 2023 12:00:00');
+        const restSecond = Math.floor(weddingDate.getTime() / 1000 - new Date().getTime() / 1000);
+        const restMinutes = restSecond / 60;
+        const resthours = restMinutes / 60;
+        const restDays = resthours / 24;
+
+        let countDay = Math.floor(restDays);
+        let countHours = Math.floor(resthours - countDay * 24);
+        let countMinutes = Math.floor(restMinutes - Math.floor(resthours) * 60);
+        let countSeconds = Math.floor(((restSecond - countDay *24*60*60) - countHours * 60 * 60) - countMinutes * 60);
+
+        const counterDays = document.querySelector('.uncounter .count-days');
+        const counterhours = document.querySelector('.uncounter .count-hours');
+        const counterMinutes = document.querySelector('.uncounter .count-minutes');
+        const counterSeconds = document.querySelector('.uncounter .count-seconds');
+        
+        counterDays.textContent = countDay;
+        counterhours.textContent = countHours;
+        counterMinutes.textContent = countMinutes;
+        counterSeconds.textContent = countSeconds;
+
+        if (countSeconds < 0) {
+            countSeconds = 0;
+        }
+
+        const interval = setInterval(() => {
+            countSeconds--;
+            if (countSeconds <= 0 && (countHours > 0 || countDay > 0 || countMinutes > 0)) {
+                countSeconds = 59;
+
+                if (countMinutes > 0) {
+                    countMinutes--;
+                } else {
+                    if (countHours > 0 || countDay > 0) {
+                        countMinutes = 59;
+
+                        if (countHours > 0) {
+                            countHours--;
+                        } else {
+                            countDay--;
+                            countHours = 23;
+                        }
+                    }
+                }
+
+            } else {
+                if (countDay <= 0 &&
+                    countHours <= 0 &&
+                    countMinutes <= 0 &&
+                    countSeconds <= 0
+                    ) {
+                    counterSeconds.textContent = 0;
+                    console.log('WEDDING!');
+                    clearInterval(interval);
+                }
+            }
+            counterDays.textContent = countDay;
+            counterhours.textContent = countHours;
+            counterMinutes.textContent = countMinutes;
+            counterSeconds.textContent = countSeconds;
+        }, 1000);
+    }
 }

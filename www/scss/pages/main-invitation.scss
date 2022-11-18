@@ -12,14 +12,25 @@
     
     &.-fr {
         background-color: rgba($yellow, 0.075);
+        .uncounter {
+            &-days,&-hours,&-minutes,&-seconds {
+                @extend .bc-yellow1;       
+            }
+        }
     }
     &.-nl {
         background-color: rgba($red, 0.1);
+        .uncounter {
+            &-days,&-hours,&-minutes,&-seconds {
+                @extend .bc-red;
+            }
+        }
     }
     
     opacity: 1;
     min-height: 100vh;
     transition: opacity 2.2s cubic-bezier(1,-0.76, 1, 1.58);
+    @extend .pb-xl;
     
     &-content {
         margin: auto;
@@ -29,6 +40,7 @@
     }
 }
 
+@import "../fragments/uncounter";
 @import "../fragments/main-invitation-title";
 @import "../fragments/part-invitation";
 

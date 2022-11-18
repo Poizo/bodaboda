@@ -105,8 +105,28 @@
         .aside-menu__content {
             @extend .block;
         }
+        .aside-menu__footer {
+            @extend .block;
+            bottom: compute-grid($grid-xs);
+            left: compute-grid($grid-xs);
+        }
     }
 
+    &__footer {
+        @extend .hidden;
+        @extend .fixed;
+        z-index: 200;
+        bottom: -500px;
+        left: -500px;
+        
+
+        .poizo-icon-link {
+            @extend .flex;
+            @extend .flex-middle;
+            @extend .m-none;
+            @extend .p-none;
+        }
+    }
     &__content {
         @extend .hidden;
 
@@ -220,6 +240,11 @@
     }
 
     &.-fr {
+        .aside-menu__footer {
+            .icon {
+                @extend .c-yellow1;
+            }
+        }
         .aside-menu__content-links {
             a {
                 border-color: $yellow;
@@ -236,6 +261,11 @@
     }
 
     &.-nl {
+        .aside-menu__footer {
+            .icon {
+                @extend .c-red1;
+            }
+        }
         .aside-menu__content-links {
             a {
                 border-color: $red;
